@@ -1,25 +1,1215 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Ravula Manohar Yadav | Full Stack Developer & Founder</title>
-    <meta name="description" content="Portfolio of Ravula Manohar Yadav — MERN Full Stack Developer, Founder of Maniora, and YouTube Tech Creator." />
-    <meta name="author" content="Ravula Manohar Yadav" />
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ravula Manohar Yadav | Full Stack Developer | MERN</title>
+  <meta name="description" content="Ravula Manohar Yadav is a Full Stack Developer specializing in React.js, Node.js, Express.js, MongoDB and SaaS application development. Founder @ Maniora.">
+  <meta name="keywords" content="Ravula Manohar Yadav, Full Stack Developer, MERN Developer, React Developer, Node.js Developer, Maniora, Software Engineer, Hyderabad">
+  <meta name="author" content="Ravula Manohar Yadav">
 
-    <meta property="og:title" content="Ravula Manohar Yadav | Portfolio" />
-    <meta property="og:description" content="MERN Full Stack Developer, Founder of Maniora, YouTube Tech Creator." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://manohar.maniora.in/">
+  <meta property="og:title" content="Ravula Manohar Yadav | Full Stack Developer | MERN">
+  <meta property="og:description" content="Building production-ready web applications, SaaS products and business platforms from idea to deployment.">
+  <meta property="og:image" content="https://manohar.maniora.in/assets/images/og-preview.png">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="" />
-    <script type="module" crossorigin src="/manoharportfolio/assets/index-DpnsX4Zh.js"></script>
-    <link rel="stylesheet" crossorigin href="/manoharportfolio/assets/index-NfUOCMq6.css">
-  </head>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ravula Manohar Yadav | Full Stack Developer | MERN">
+  <meta name="twitter:description" content="Building production-ready web applications, SaaS products and business platforms from idea to deployment.">
 
-  <body>
-    <div id="root"></div>
-  </body>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN for utility support -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bg: '#0c0d0e',
+            surface: '#131417',
+            surfaceElevated: '#1f2026',
+            accent: '#ef4444',
+            accentHover: '#dc2626',
+            textMuted: '#8e919a',
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Master CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#0c0d0e] text-[#f4f4f0] antialiased min-h-screen selection:bg-red-500 selection:text-white relative tech-grid-bg">
+
+  <!-- ========================================================================= -->
+  <!-- 1. NAVIGATION BAR                                                         -->
+  <!-- ========================================================================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent" id="main-nav">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Monogram -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block shadow-[0_0_10px_#ef4444]"></span>
+        <span class="font-mono font-bold tracking-tight text-lg text-white group-hover:text-red-400 transition-colors">
+          RMY<span class="text-red-500">.</span>
+        </span>
+        <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono uppercase bg-neutral-900 border border-neutral-800 text-neutral-400 rounded">
+          DEV / FOUNDER
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-mono tracking-wider">
+        <a href="#about" class="nav-link text-neutral-400 hover:text-white transition-colors">ABOUT</a>
+        <a href="#experience" class="nav-link text-neutral-400 hover:text-white transition-colors">EXPERIENCE</a>
+        <a href="#work" class="nav-link text-neutral-400 hover:text-white transition-colors">WORK</a>
+        <a href="#approach" class="nav-link text-neutral-400 hover:text-white transition-colors">STACK & PROCESS</a>
+        <a href="#contact" class="nav-link text-neutral-400 hover:text-white transition-colors">CONTACT</a>
+      </nav>
+
+      <!-- Desktop Action CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="assets/resume.pdf" download target="_blank" class="px-4 py-2 text-xs font-mono font-medium border border-neutral-700 hover:border-red-500/50 text-white rounded bg-neutral-900/60 hover:bg-neutral-800 transition-all duration-200 flex items-center gap-2">
+          <span>RESUME</span>
+          <svg class="w-3.5 h-3.5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" class="md:hidden p-2 text-neutral-400 hover:text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu-drawer" class="hidden fixed inset-0 z-40 bg-neutral-950/95 backdrop-blur-xl md:hidden pt-24 px-6">
+    <nav class="flex flex-col gap-6 text-lg font-mono">
+      <a href="#about" class="mobile-nav-link text-neutral-300 hover:text-red-400 py-2 border-b border-neutral-800">01. ABOUT</a>
+      <a href="#experience" class="mobile-nav-link text-neutral-300 hover:text-red-400 py-2 border-b border-neutral-800">02. EXPERIENCE</a>
+      <a href="#work" class="mobile-nav-link text-neutral-300 hover:text-red-400 py-2 border-b border-neutral-800">03. FEATURED WORK</a>
+      <a href="#approach" class="mobile-nav-link text-neutral-300 hover:text-red-400 py-2 border-b border-neutral-800">04. HOW I BUILD</a>
+      <a href="#contact" class="mobile-nav-link text-neutral-300 hover:text-red-400 py-2 border-b border-neutral-800">05. CONTACT</a>
+      <a href="assets/resume.pdf" download class="mt-4 px-6 py-3 bg-red-600 text-white font-semibold text-center rounded flex items-center justify-center gap-2">
+        <span>DOWNLOAD RESUME PDF</span>
+      </a>
+    </nav>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO SECTION                                                           -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="min-h-screen pt-32 pb-20 flex items-center relative overflow-hidden">
+    
+    <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Hero Left Text Content -->
+      <div class="lg:col-span-7 space-y-8 reveal-on-scroll">
+        
+        <!-- Identity Status Badges -->
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-mono text-neutral-300">
+            <span class="pulse-dot w-2 h-2 rounded-full bg-red-500"></span>
+            FULL STACK DEVELOPER
+          </span>
+          <span class="px-3 py-1 rounded-full bg-neutral-900/60 border border-neutral-800 text-xs font-mono text-neutral-400">
+            FOUNDER @ MANIORA
+          </span>
+          <span class="px-3 py-1 rounded-full bg-neutral-900/40 border border-neutral-800/80 text-xs font-mono text-neutral-500">
+            HYDERABAD, INDIA
+          </span>
+        </div>
+
+        <!-- Name & Primary Title -->
+        <div>
+          <h1 class="text-4xl sm:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.05] text-white">
+            RAVULA MANOHAR <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-neutral-200">
+              YADAV<span class="text-red-500">.</span>
+            </span>
+          </h1>
+          <p class="mt-3 text-xs sm:text-sm font-mono text-red-400/90 tracking-widest uppercase">
+            MERN / REACT.JS / NODE.JS / EXPRESS / MONGODB / MYSQL
+          </p>
+        </div>
+
+        <!-- Statements -->
+        <div class="space-y-4 max-w-2xl">
+          <p class="text-xl sm:text-2xl font-normal text-neutral-100 leading-snug">
+            "Building production-ready web applications, SaaS products and business platforms from idea to deployment."
+          </p>
+          <p class="text-sm sm:text-base text-neutral-400 leading-relaxed">
+            Full Stack Developer and founder of Maniora, focused on building practical digital products across frontend, backend, APIs, databases and deployment.
+          </p>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="pt-4 flex flex-wrap items-center gap-4">
+          <a href="#work" class="btn-primary">
+            <span>VIEW WORK</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+          </a>
+
+          <a href="assets/resume.pdf" download class="btn-secondary">
+            <span>DOWNLOAD RESUME</span>
+            <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          </a>
+        </div>
+
+        <!-- Social & Quick Links -->
+        <div class="pt-6 border-t border-neutral-900 flex flex-wrap items-center gap-6 text-xs font-mono text-neutral-400">
+          <a href="https://www.linkedin.com/in/ravulamanohar" target="_blank" rel="noopener" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
+            <span>LINKEDIN</span>
+            <svg class="w-3 h-3 text-neutral-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.64a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2Z"/></svg>
+          </a>
+
+          <a href="https://github.com/manoharyadavr" target="_blank" rel="noopener" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
+            <span>GITHUB</span>
+            <svg class="w-3 h-3 text-neutral-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+          </a>
+
+          <a href="https://www.maniora.in/" target="_blank" rel="noopener" class="text-red-400 hover:text-red-300 font-bold transition-colors flex items-center gap-1">
+            <span>VISIT MANIORA →</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Hero Right Interactive System Map Graphic -->
+      <div class="lg:col-span-5 reveal-on-scroll delay-200">
+        <div class="surface-card rounded-xl p-6 relative overflow-hidden">
+          
+          <!-- Monospace Card Header -->
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-neutral-800 text-xs font-mono">
+            <span class="text-red-400 font-semibold flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+              SYSTEM ARCHITECTURE MAP
+            </span>
+            <span class="text-neutral-500">PIPELINE v2.6</span>
+          </div>
+
+          <!-- Interactive SVG System Diagram -->
+          <div class="relative py-4">
+            <svg class="w-full h-auto" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              
+              <!-- Connecting Paths -->
+              <path d="M 70 50 L 200 50 L 330 50 L 330 160 L 200 160 L 70 160 L 70 270 L 200 270 L 330 270" stroke="#262626" stroke-width="2"/>
+              <path d="M 70 50 L 200 50 L 330 50 L 330 160 L 200 160 L 70 160 L 70 270 L 200 270 L 330 270" stroke="#ef4444" stroke-width="2" class="node-path" stroke-opacity="0.6"/>
+
+              <!-- NODE 1: IDEA -->
+              <g class="node-group system-map-node cursor-pointer" data-node-id="node-idea">
+                <rect x="25" y="25" width="90" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
+                <circle cx="70" cy="50" r="4" fill="#ef4444" class="node-circle" />
+                <text x="70" y="54" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">01. IDEA</text>
+              </g>
+
+              <!-- NODE 2: ARCHITECTURE -->
+              <g class="node-group system-map-node cursor-pointer" data-node-id="node-architecture">
+                <rect x="140" y="25" width="120" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
+                <circle cx="200" cy="50" r="4" fill="#ef4444" class="node-circle" />
+                <text x="200" y="54" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">02. ARCHITECTURE</text>
+              </g>
+
+              <!-- NODE 3: FRONTEND -->
+              <g class="node-group system-map-node cursor-pointer" data-node-id="node-frontend">
+                <rect x="280" y="25" width="100" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
+                <circle cx="330" cy="50" r="4" fill="#ef4444" class="node-circle" />
+                <text x="330" y="54" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">03. FRONTEND</text>
+              </g>
+
+              <!-- NODE 4: API -->
+              <g class="node-group system-map-node cursor-pointer" data-node-id="node-api">
+                <rect x="285" y="135" width="90" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
+                <circle cx="330" cy="160" r="4" fill="#ef4444" class="node-circle" />
+                <text x="330" y="164" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">04. REST API</text>
+              </g>
+
+              <!-- NODE 5: DATABASE -->
+              <g class="node-group system-map-node cursor-pointer" data-node-id="node-database">
+                <rect x="145" y="135" width="110" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
+                <circle cx="200" cy="160" r="4" fill="#ef4444" class="node-circle" />
+                <text x="200" y="164" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">05. DATABASE</text>
+              </g>
+
+              <!-- NODE 6: DEPLOYMENT -->
+              <g class="node-group system-map-node cursor-pointer" data-node-id="node-deployment">
+                <rect x="15" y="135" width="110" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
+                <circle cx="70" cy="160" r="4" fill="#ef4444" class="node-circle" />
+                <text x="70" y="164" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">06. DEPLOYMENT</text>
+              </g>
+
+              <!-- Central Active Metric Indicator -->
+              <rect x="100" y="245" width="200" height="48" rx="6" fill="#0c0d0e" stroke="#ef4444" stroke-width="1" stroke-dasharray="4 4" />
+              <text x="200" y="268" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="11" font-weight="700">✓ PRODUCTION READY</text>
+              <text x="200" y="283" text-anchor="middle" fill="#8e919a" font-family="JetBrains Mono" font-size="9">END-TO-END DEVELOPMENT</text>
+            </svg>
+          </div>
+
+          <!-- Telemetry Inspection Terminal Box -->
+          <div class="mt-4 pt-3 border-t border-neutral-800 bg-neutral-950 p-3 rounded font-mono text-[11px] leading-relaxed">
+            <div class="text-neutral-500 mb-1 flex items-center justify-between">
+              <span>CONSOLE OUTPUT</span>
+              <span>HOVER NODE TO INSPECT SPECS</span>
+            </div>
+            <p id="telemetry-details" class="text-neutral-300 transition-colors duration-200">
+              SYSTEM TELEMETRY: REAL-TIME ARCHITECTURE PIPELINE // SELECT NODE TO INSPECT SPECS
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. TECHNICAL IDENTITY STRIP                                              -->
+  <!-- ========================================================================= -->
+  <section id="tech-strip" class="py-6 border-y border-neutral-800/80 bg-neutral-950/60 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-6">
+      
+      <div class="flex items-center gap-3 shrink-0 font-mono text-xs text-red-400 font-semibold tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-red-500"></span>
+        <span>01 / ENGINEERING STACK:</span>
+      </div>
+
+      <!-- Marquee / Scrollable tech list -->
+      <div class="overflow-x-auto w-full no-scrollbar flex items-center gap-4 text-xs font-mono text-neutral-300">
+        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">React.js</span>
+        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Node.js</span>
+        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Express.js</span>
+        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">MongoDB</span>
+        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">MySQL</span>
+        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Next.js</span>
+        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">JavaScript (ES6+)</span>
+        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">REST APIs</span>
+        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Git & GitHub</span>
+        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Linux / VPS</span>
+        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Tailwind CSS</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. ABOUT SECTION                                                          -->
+  <!-- ========================================================================= -->
+  <section id="about" class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Section Heading & Copy -->
+        <div class="lg:col-span-7 space-y-6 reveal-on-scroll">
+          <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest">
+            02 / ABOUT THE DEVELOPER
+          </p>
+          <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+            ENGINEER / BUILDER / FOUNDER
+          </h2>
+
+          <div class="space-y-4 text-neutral-300 text-base sm:text-lg leading-relaxed pt-2">
+            <p>
+              I'm a Full Stack Developer and founder of Maniora based in Hyderabad, India.
+            </p>
+            <p>
+              I build web applications, SaaS products and business platforms across frontend, backend, databases, APIs and deployment.
+            </p>
+            <p class="text-neutral-400">
+              I enjoy taking products from requirements and architecture through implementation, testing, deployment and production support.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Technical Profile Panel -->
+        <div class="lg:col-span-5 reveal-on-scroll delay-200">
+          <div class="surface-card rounded-xl p-6 sm:p-8 space-y-6 relative">
+            
+            <div class="border-b border-neutral-800 pb-4 flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-white tracking-widest">TECHNICAL PROFILE</span>
+              <span class="w-2 h-2 rounded-full bg-red-500"></span>
+            </div>
+
+            <div class="space-y-5 text-sm font-mono">
+              <div>
+                <span class="text-xs text-neutral-500 block mb-1">ROLE</span>
+                <span class="text-white font-medium">Full Stack Developer</span>
+              </div>
+
+              <div>
+                <span class="text-xs text-neutral-500 block mb-1">FOCUS</span>
+                <span class="text-neutral-200">MERN / Web Applications / SaaS</span>
+              </div>
+
+              <div>
+                <span class="text-xs text-neutral-500 block mb-1">LOCATION</span>
+                <span class="text-neutral-200">Hyderabad, Telangana, India</span>
+              </div>
+
+              <div>
+                <span class="text-xs text-neutral-500 block mb-1">CURRENT STATUS</span>
+                <span class="text-red-400 font-semibold">Founder @ Maniora</span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs font-mono text-neutral-400">
+              <span>AVAILABLE FOR ROLES</span>
+              <span class="text-emerald-400">OPEN TO WORK</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. EXPERIENCE SECTION                                                     -->
+  <!-- ========================================================================= -->
+  <section id="experience" class="py-24 border-t border-neutral-900 bg-neutral-950/40">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="max-w-2xl mb-16 reveal-on-scroll">
+        <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest mb-2">
+          03 / PROFESSIONAL HISTORY
+        </p>
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white">
+          EXPERIENCE
+        </h2>
+        <p class="mt-3 text-neutral-400 text-sm sm:text-base">
+          Proven track record in building web applications, backend APIs, and SaaS products.
+        </p>
+      </div>
+
+      <!-- Vertical Structured Editorial Timeline -->
+      <div class="space-y-12 relative before:absolute before:left-4 sm:before:left-8 before:top-2 before:bottom-2 before:w-px before:bg-neutral-800">
+        
+        <!-- EXPERIENCE 01 -->
+        <div class="relative pl-10 sm:pl-20 reveal-on-scroll">
+          <div class="absolute left-2.5 sm:left-6 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-neutral-950 border-2 border-red-500"></div>
+
+          <div class="surface-card rounded-xl p-6 sm:p-8 space-y-4">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-800 pb-4">
+              <div>
+                <span class="font-mono text-xs text-red-400 font-bold tracking-widest">01 — PRESENT</span>
+                <h3 class="text-2xl font-bold text-white mt-1">MANIORA</h3>
+                <p class="text-sm text-neutral-300 font-mono">Founder & Full Stack Developer</p>
+              </div>
+              <div class="text-left sm:text-right font-mono text-xs text-neutral-400">
+                <p>Jul 2025 — Present</p>
+                <p class="text-neutral-500">Hyderabad, Telangana</p>
+              </div>
+            </div>
+
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">
+              "Building and deploying full-stack applications, SaaS products and business platforms from requirements and architecture through development, testing and production deployment."
+            </p>
+
+            <!-- Tech Stack Tags -->
+            <div class="flex flex-wrap items-center gap-2 pt-2">
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">React.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Node.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Express.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MongoDB</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MySQL</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">REST APIs</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Authentication</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Third-party APIs</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Linux / VPS</span>
+            </div>
+
+            <!-- Key Responsibilities list -->
+            <div class="pt-4 border-t border-neutral-850">
+              <p class="text-xs font-mono text-neutral-400 mb-2 uppercase tracking-wider">RESPONSIBILITIES:</p>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-neutral-400 font-sans">
+                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> Full-stack application development</li>
+                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> SaaS product development & architecture</li>
+                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> REST API design & middleware authoring</li>
+                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> Database schema design & optimization</li>
+                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> Payment gateway integrations (Razorpay)</li>
+                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> VPS server setup & production deployment</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- EXPERIENCE 02 -->
+        <div class="relative pl-10 sm:pl-20 reveal-on-scroll delay-100">
+          <div class="absolute left-2.5 sm:left-6 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-neutral-950 border-2 border-neutral-600"></div>
+
+          <div class="surface-card rounded-xl p-6 sm:p-8 space-y-4">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-800 pb-4">
+              <div>
+                <span class="font-mono text-xs text-neutral-400 font-bold tracking-widest">02</span>
+                <h3 class="text-2xl font-bold text-white mt-1">BUILD YOUR VISION</h3>
+                <p class="text-sm text-neutral-300 font-mono">MERN Full Stack Developer</p>
+              </div>
+              <div class="text-left sm:text-right font-mono text-xs text-neutral-400">
+                <p>Apr 2025 — Jun 2025</p>
+                <p class="text-neutral-500">Hyderabad</p>
+              </div>
+            </div>
+
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">
+              "Worked on full-stack web applications using the MERN stack, developing React interfaces, Node.js/Express APIs, database workflows and application integrations."
+            </p>
+
+            <div class="flex flex-wrap items-center gap-2 pt-2">
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">JavaScript</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">React.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Node.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Express.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MongoDB</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MySQL</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- EXPERIENCE 03 -->
+        <div class="relative pl-10 sm:pl-20 reveal-on-scroll delay-200">
+          <div class="absolute left-2.5 sm:left-6 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-neutral-950 border-2 border-neutral-700"></div>
+
+          <div class="surface-card rounded-xl p-6 sm:p-8 space-y-4">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-800 pb-4">
+              <div>
+                <span class="font-mono text-xs text-neutral-500 font-bold tracking-widest">03</span>
+                <h3 class="text-xl font-bold text-white mt-1">SANDBLAZE DIGITALS</h3>
+                <p class="text-sm text-neutral-300 font-mono">Full Stack Developer</p>
+              </div>
+              <div class="text-left sm:text-right font-mono text-xs text-neutral-400">
+                <p>Mar 2024</p>
+              </div>
+            </div>
+
+            <p class="text-neutral-300 text-sm leading-relaxed">
+              "Contributed to frontend and backend web application development, database integration, feature implementation, debugging and testing."
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6. FEATURED PROJECTS SECTION                                              -->
+  <!-- ========================================================================= -->
+  <section id="work" class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-20 reveal-on-scroll">
+        <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest mb-2">
+          04 / FEATURED PROJECTS
+        </p>
+        <h2 class="text-3xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+          SELECTED WORK<span class="text-red-500">.</span>
+        </h2>
+        <p class="mt-4 text-neutral-400 text-base sm:text-lg">
+          Real products, business applications and digital experiences I've built.
+        </p>
+      </div>
+
+      <!-- Large Showcase Projects Cards -->
+      <div class="space-y-16">
+        
+        <!-- PROJECT 01: MANIORA STUDIO (Image Left / Content Right) -->
+        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll">
+          
+          <div class="lg:col-span-7 bg-neutral-900 p-8 sm:p-12 relative min-h-[320px] flex items-center justify-center border-b lg:border-b-0 lg:border-r border-neutral-800">
+            <div class="w-full max-w-md space-y-4">
+              <div class="flex items-center justify-between font-mono text-xs text-neutral-500">
+                <span>PROJECT // 01</span>
+                <span class="text-red-400 font-bold">SAAS ECOSYSTEM</span>
+              </div>
+              <div class="p-6 rounded-xl bg-neutral-950 border border-neutral-800 space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                  <span class="font-mono text-sm font-bold text-white">MANIORA STUDIO ECOSYSTEM</span>
+                </div>
+                <p class="text-xs text-neutral-400 font-mono">
+                  Multi-tenant studio accounts, client galleries, RBAC permissions, and automated invoicing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 p-8 sm:p-10 space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-4xl font-bold text-neutral-700">01</span>
+              <span class="px-3 py-1 text-xs font-mono bg-red-500/10 text-red-400 border border-red-500/20 rounded">B2B2C SAAS PLATFORM</span>
+            </div>
+
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-white accent-line-grow inline-block">MANIORA STUDIO</h3>
+              <p class="mt-3 text-neutral-300 text-sm sm:text-base leading-relaxed">
+                Full-stack SaaS ecosystem for photography studios, providing studio accounts, digital/live galleries, client-facing experiences, contract management, automated invoicing and multi-tenant workflows.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">React.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Node.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Express.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MongoDB</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Razorpay API</span>
+            </div>
+
+            <div class="pt-4 flex items-center gap-4">
+              <button onclick="openProjectModal('maniora-studio')" class="btn-secondary text-xs">
+                <span>VIEW ARCHITECTURE DETAILS</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PROJECT 02: MANIORA DM AUTOMATION (Content Left / Image Right) -->
+        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll">
+          
+          <div class="lg:col-span-5 p-8 sm:p-10 space-y-6 order-2 lg:order-1">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-4xl font-bold text-neutral-700">02</span>
+              <span class="px-3 py-1 text-xs font-mono bg-neutral-800 text-neutral-300 border border-neutral-700 rounded">INSTAGRAM SAAS</span>
+            </div>
+
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-white accent-line-grow inline-block">MANIORA DM AUTOMATION</h3>
+              <p class="mt-3 text-neutral-300 text-sm sm:text-base leading-relaxed">
+                Instagram automation platform integrating Meta/Instagram APIs for account messaging and automation workflows.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Node.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Express.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Meta Graph API</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MongoDB</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Webhooks</span>
+            </div>
+
+            <div class="pt-4 flex items-center gap-4">
+              <button onclick="openProjectModal('maniora-dm-automation')" class="btn-secondary text-xs">
+                <span>VIEW DETAILS</span>
+              </button>
+              <a href="https://chat.maniora.in/" target="_blank" rel="noopener" class="text-xs font-mono text-red-400 hover:text-red-300 font-bold flex items-center gap-1">
+                <span>LIVE PROJECT</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 bg-neutral-900 p-8 sm:p-12 relative min-h-[320px] flex items-center justify-center border-b lg:border-b-0 lg:border-l border-neutral-800 order-1 lg:order-2">
+            <div class="w-full max-w-md space-y-4">
+              <div class="flex items-center justify-between font-mono text-xs text-neutral-500">
+                <span>PROJECT // 02</span>
+                <span class="text-neutral-400 font-bold">AUTOMATION ENGINE</span>
+              </div>
+              <div class="p-6 rounded-xl bg-neutral-950 border border-neutral-800 space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                  <span class="font-mono text-sm font-bold text-white">META GRAPH API INTEGRATION</span>
+                </div>
+                <p class="text-xs text-neutral-400 font-mono">
+                  Webhook trigger consumer, automated DM responses, keyword matching, and rate-limit queue management.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PROJECT 03: PIXELFABLE18 (Image Left / Content Right) -->
+        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll">
+          
+          <div class="lg:col-span-7 bg-neutral-900 p-8 sm:p-12 relative min-h-[320px] flex items-center justify-center border-b lg:border-b-0 lg:border-r border-neutral-800">
+            <div class="w-full max-w-md space-y-4">
+              <div class="flex items-center justify-between font-mono text-xs text-neutral-500">
+                <span>PROJECT // 03</span>
+                <span class="text-red-400 font-bold">LIVE STORE</span>
+              </div>
+              <div class="p-6 rounded-xl bg-neutral-950 border border-neutral-800 space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                  <span class="font-mono text-sm font-bold text-white">DIGITAL PRODUCTS E-COMMERCE</span>
+                </div>
+                <p class="text-xs text-neutral-400 font-mono">
+                  Secure checkout pipeline, Razorpay integration, admin panel, and instant automated email delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 p-8 sm:p-10 space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-4xl font-bold text-neutral-700">03</span>
+              <span class="px-3 py-1 text-xs font-mono bg-neutral-800 text-neutral-300 border border-neutral-700 rounded">E-COMMERCE PLATFORM</span>
+            </div>
+
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-white accent-line-grow inline-block">PIXELFABLE18</h3>
+              <p class="mt-3 text-neutral-300 text-sm sm:text-base leading-relaxed">
+                Digital products e-commerce platform with product management, admin functionality, secure checkout, payment integration and instant digital delivery.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">React.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Node.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Express.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MongoDB</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Razorpay</span>
+            </div>
+
+            <div class="pt-4 flex items-center gap-4">
+              <button onclick="openProjectModal('pixelfable18')" class="btn-secondary text-xs">
+                <span>VIEW DETAILS</span>
+              </button>
+              <a href="https://pixelfable18.in/" target="_blank" rel="noopener" class="text-xs font-mono text-red-400 hover:text-red-300 font-bold flex items-center gap-1">
+                <span>LIVE PROJECT</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PROJECT 04: NUMBER SORTING SYSTEM (Content Left / Image Right) -->
+        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll">
+          
+          <div class="lg:col-span-5 p-8 sm:p-10 space-y-6 order-2 lg:order-1">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-4xl font-bold text-neutral-700">04</span>
+              <span class="px-3 py-1 text-xs font-mono bg-neutral-800 text-neutral-300 border border-neutral-700 rounded">DATA PROCESSING</span>
+            </div>
+
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-white accent-line-grow inline-block">NUMBER SORTING SYSTEM / SORTIFYYY</h3>
+              <p class="mt-3 text-neutral-300 text-sm sm:text-base leading-relaxed">
+                Business application for processing and classifying large mobile-number datasets using telecom prefix, operator and regional data.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">PHP</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">CodeIgniter</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MySQL</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">JavaScript</span>
+            </div>
+
+            <div class="pt-4 flex items-center gap-4">
+              <button onclick="openProjectModal('sortifyyy')" class="btn-secondary text-xs">
+                <span>VIEW DETAILS</span>
+              </button>
+              <a href="https://sortifyy.cloud/" target="_blank" rel="noopener" class="text-xs font-mono text-red-400 hover:text-red-300 font-bold flex items-center gap-1">
+                <span>LIVE PROJECT</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 bg-neutral-900 p-8 sm:p-12 relative min-h-[320px] flex items-center justify-center border-b lg:border-b-0 lg:border-l border-neutral-800 order-1 lg:order-2">
+            <div class="w-full max-w-md space-y-4">
+              <div class="flex items-center justify-between font-mono text-xs text-neutral-500">
+                <span>PROJECT // 04</span>
+                <span class="text-emerald-400 font-bold">ENTERPRISE DATA UTILITY</span>
+              </div>
+              <div class="p-6 rounded-xl bg-neutral-950 border border-neutral-800 space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                  <span class="font-mono text-sm font-bold text-white">DATA CLEANSING & SORTING</span>
+                </div>
+                <p class="text-xs text-neutral-400 font-mono">
+                  Excel file processing, duplicate removal, search/filter, pagination, follow-ups, and export workflows.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PROJECT 05 & 06: GRID LAYOUT FOR THE KAHANI CREW & 4KMEDIA -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- PROJECT 05: THE KAHANI CREW -->
+          <div class="surface-card rounded-2xl p-8 space-y-6 reveal-on-scroll">
+            <div class="flex items-center justify-between border-b border-neutral-800 pb-4">
+              <span class="font-mono text-2xl font-bold text-neutral-600">05</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-400 rounded">EVENT MANAGEMENT</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-white accent-line-grow inline-block">THE KAHANI CREW</h3>
+              <p class="mt-3 text-neutral-300 text-sm leading-relaxed">
+                Custom event management and photography website focused on visual presentation, responsive experience and performance.
+              </p>
+            </div>
+            <div class="pt-4 flex items-center gap-4">
+              <button onclick="openProjectModal('kahani-crew')" class="btn-secondary text-xs">
+                <span>DETAILS</span>
+              </button>
+              <a href="https://thekahanicrew.com/" target="_blank" rel="noopener" class="text-xs font-mono text-red-400 hover:text-red-300 font-bold flex items-center gap-1">
+                <span>VISIT WEBSITE →</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 06: 4KMEDIA -->
+          <div class="surface-card rounded-2xl p-8 space-y-6 reveal-on-scroll delay-100">
+            <div class="flex items-center justify-between border-b border-neutral-800 pb-4">
+              <span class="font-mono text-2xl font-bold text-neutral-600">06</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-400 rounded">AGENCY WEBSITE</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-white accent-line-grow inline-block">4KMEDIA</h3>
+              <p class="mt-3 text-neutral-300 text-sm leading-relaxed">
+                High-performance business website with custom visual design, responsive layouts and interactive experiences.
+              </p>
+            </div>
+            <div class="pt-4 flex items-center gap-4">
+              <button onclick="openProjectModal('4kmedia')" class="btn-secondary text-xs">
+                <span>DETAILS</span>
+              </button>
+              <a href="https://4kmedia.in/" target="_blank" rel="noopener" class="text-xs font-mono text-red-400 hover:text-red-300 font-bold flex items-center gap-1">
+                <span>VISIT WEBSITE →</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 7. ENGINEERING APPROACH ("HOW I BUILD")                                   -->
+  <!-- ========================================================================= -->
+  <section id="approach" class="py-24 border-t border-neutral-900 bg-neutral-950/60">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="max-w-2xl mb-16 reveal-on-scroll">
+        <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest mb-2">
+          05 / SYSTEMOLOGY & PROCESS
+        </p>
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white">
+          HOW I BUILD<span class="text-red-500">.</span>
+        </h2>
+        <p class="mt-3 text-neutral-400 text-sm sm:text-base">
+          A disciplined 4-step engineering system for shipping robust web products.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- STEP 01 -->
+        <div class="surface-card rounded-xl p-6 space-y-4 reveal-on-scroll">
+          <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
+            <span class="font-mono text-2xl font-bold text-red-400">01</span>
+            <span class="font-mono text-[10px] uppercase text-neutral-500">STAGE ONE</span>
+          </div>
+          <h3 class="text-lg font-bold text-white font-mono">UNDERSTAND</h3>
+          <p class="text-xs text-neutral-300 leading-relaxed">
+            Requirements, user personas, business goals, and core application workflows before writing code.
+          </p>
+        </div>
+
+        <!-- STEP 02 -->
+        <div class="surface-card rounded-xl p-6 space-y-4 reveal-on-scroll delay-100">
+          <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
+            <span class="font-mono text-2xl font-bold text-red-400">02</span>
+            <span class="font-mono text-[10px] uppercase text-neutral-500">STAGE TWO</span>
+          </div>
+          <h3 class="text-lg font-bold text-white font-mono">ARCHITECT</h3>
+          <p class="text-xs text-neutral-300 leading-relaxed">
+            Application structure, database schemas (MongoDB / MySQL), API contracts, auth models, and technology selection.
+          </p>
+        </div>
+
+        <!-- STEP 03 -->
+        <div class="surface-card rounded-xl p-6 space-y-4 reveal-on-scroll delay-200">
+          <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
+            <span class="font-mono text-2xl font-bold text-red-400">03</span>
+            <span class="font-mono text-[10px] uppercase text-neutral-500">STAGE THREE</span>
+          </div>
+          <h3 class="text-lg font-bold text-white font-mono">BUILD</h3>
+          <p class="text-xs text-neutral-300 leading-relaxed">
+            Frontend UI implementation, REST API authoring, third-party integrations, payment gateways, and feature testing.
+          </p>
+        </div>
+
+        <!-- STEP 04 -->
+        <div class="surface-card rounded-xl p-6 space-y-4 reveal-on-scroll delay-300">
+          <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
+            <span class="font-mono text-2xl font-bold text-red-400">04</span>
+            <span class="font-mono text-[10px] uppercase text-neutral-500">STAGE FOUR</span>
+          </div>
+          <h3 class="text-lg font-bold text-white font-mono">SHIP</h3>
+          <p class="text-xs text-neutral-300 leading-relaxed">
+            VPS provisioning, SSL certificates, NGINX setup, production debugging, maintenance, and monitoring.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 8. AI-ASSISTED DEVELOPMENT                                               -->
+  <!-- ========================================================================= -->
+  <section id="ai-assisted" class="py-20 border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="surface-card rounded-2xl p-8 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center reveal-on-scroll">
+        
+        <div class="lg:col-span-8 space-y-4">
+          <p class="font-mono text-xs text-neutral-400 font-semibold uppercase tracking-widest">
+            06 / WORKFLOW AMPLIFICATION
+          </p>
+          <h2 class="text-2xl sm:text-4xl font-bold text-white tracking-tight">
+            AI-ASSISTED DEVELOPMENT
+          </h2>
+          <p class="text-neutral-300 text-sm sm:text-base leading-relaxed max-w-3xl">
+            "I use modern AI-assisted development tools alongside traditional engineering practices to accelerate implementation, debugging, refactoring, documentation and codebase exploration while maintaining control over architecture and production quality."
+          </p>
+        </div>
+
+        <div class="lg:col-span-4 flex flex-wrap items-center justify-start lg:justify-end gap-3 font-mono text-xs">
+          <span class="px-3.5 py-2 bg-neutral-900 border border-neutral-800 text-neutral-300 rounded font-semibold flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            Cursor
+          </span>
+          <span class="px-3.5 py-2 bg-neutral-900 border border-neutral-800 text-neutral-300 rounded font-semibold flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+            Claude
+          </span>
+          <span class="px-3.5 py-2 bg-neutral-900 border border-neutral-800 text-neutral-300 rounded font-semibold flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-red-500"></span>
+            Antigravity
+          </span>
+          <span class="px-3.5 py-2 bg-neutral-900 border border-neutral-800 text-neutral-300 rounded font-semibold flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            ChatGPT
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 9. CLIENT WORK / TESTIMONIALS                                            -->
+  <!-- ========================================================================= -->
+  <section id="testimonials" class="py-24 border-t border-neutral-900 bg-neutral-950/40">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="max-w-2xl mb-16 reveal-on-scroll">
+        <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest mb-2">
+          07 / CLIENT VERIFICATION
+        </p>
+        <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white">
+          CLIENT FEEDBACK<span class="text-red-500">.</span>
+        </h2>
+        <p class="mt-3 text-neutral-400 text-sm sm:text-base">
+          Direct feedback from founders and project collaborators.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- TESTIMONIAL 01 -->
+        <div class="surface-card rounded-xl p-8 space-y-6 flex flex-col justify-between reveal-on-scroll">
+          <div class="space-y-4">
+            <div class="text-red-500 text-2xl font-serif">“</div>
+            <p class="text-neutral-300 text-sm leading-relaxed italic">
+              "Working with the MANIORA team was a great experience. The website looks premium, loads fast, and perfectly represents our brand. The custom gallery and smooth animations really make it stand out. Very happy with the final result!"
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 font-mono">
+            <p class="font-bold text-white text-sm">Ujwal</p>
+            <p class="text-xs text-neutral-500">Co-Founder — The Kahani Crew</p>
+          </div>
+        </div>
+
+        <!-- TESTIMONIAL 02 -->
+        <div class="surface-card rounded-xl p-8 space-y-6 flex flex-col justify-between reveal-on-scroll delay-100">
+          <div class="space-y-4">
+            <div class="text-red-500 text-2xl font-serif">“</div>
+            <p class="text-neutral-300 text-sm leading-relaxed italic">
+              "Working with MANIORA was an amazing experience. They built us a preset-selling website with an admin panel that makes it super easy to manage orders and track presets. Our business finally has a professional online presence!"
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 font-mono">
+            <p class="font-bold text-white text-sm">Akhil</p>
+            <p class="text-xs text-neutral-500">Founder — Pixelfable18</p>
+          </div>
+        </div>
+
+        <!-- TESTIMONIAL 03 -->
+        <div class="surface-card rounded-xl p-8 space-y-6 flex flex-col justify-between reveal-on-scroll delay-200">
+          <div class="space-y-4">
+            <div class="text-red-500 text-2xl font-serif">“</div>
+            <p class="text-neutral-300 text-sm leading-relaxed italic">
+              "The MANIORA team nailed our website for 4KMedia. The output is clean, fast, and on-brand—but the real highlight is the animated illustrations. They bring the site to life and make our story pop. Super impressed!"
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 font-mono">
+            <p class="font-bold text-white text-sm">Krishna Kanth</p>
+            <p class="text-xs text-neutral-500">Founder — 4KMedia</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 10. RESUME CTA SECTION                                                    -->
+  <!-- ========================================================================= -->
+  <section id="resume-cta" class="py-24 border-t border-neutral-900 bg-gradient-to-b from-neutral-950 to-[#0c0d0e]">
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8 reveal-on-scroll">
+      
+      <span class="inline-block px-3 py-1 bg-red-500/10 border border-red-500/20 text-red-400 font-mono text-xs rounded-full uppercase tracking-wider">
+        CAREER OPPORTUNITIES
+      </span>
+
+      <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white">
+        LOOKING FOR A DEVELOPER?
+      </h2>
+
+      <p class="text-neutral-300 text-base sm:text-xl max-w-2xl mx-auto">
+        I'm currently open to Full Stack Developer, MERN Developer and Software Engineer opportunities.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+        <a href="assets/resume.pdf" download class="btn-primary">
+          <span>DOWNLOAD RESUME</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/ravulamanohar" target="_blank" rel="noopener" class="btn-secondary">
+          <span>VIEW LINKEDIN</span>
+          <svg class="w-4 h-4 text-neutral-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.64a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2Z"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 11. CONTACT SECTION                                                       -->
+  <!-- ========================================================================= -->
+  <section id="contact" class="py-28 border-t border-neutral-900 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6 reveal-on-scroll">
+          <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest">
+            08 / GET IN TOUCH
+          </p>
+          <h2 class="text-4xl sm:text-6xl font-bold text-white tracking-tight">
+            LET'S BUILD SOMETHING<span class="text-red-500">.</span>
+          </h2>
+          <p class="text-neutral-300 text-base sm:text-xl max-w-xl">
+            Have a product idea, project opportunity or engineering role? Let's talk.
+          </p>
+
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a href="mailto:ravulamanohar8@gmail.com" class="btn-primary">
+              <span>SEND EMAIL</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+
+            <button class="copy-email-btn btn-secondary">
+              <span>COPY EMAIL ADDRESS</span>
+              <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 reveal-on-scroll delay-200">
+          <div class="surface-card rounded-xl p-8 space-y-6 font-mono text-sm">
+            <div class="border-b border-neutral-800 pb-3 flex items-center justify-between">
+              <span class="text-xs text-neutral-500">DIRECT CHANNELS</span>
+              <span class="text-red-500 font-bold">● ONLINE</span>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <span class="text-xs text-neutral-500 block mb-1">EMAIL</span>
+                <a href="mailto:ravulamanohar8@gmail.com" class="text-white hover:text-red-400 transition-colors">ravulamanohar8@gmail.com</a>
+              </div>
+
+              <div>
+                <span class="text-xs text-neutral-500 block mb-1">LINKEDIN</span>
+                <a href="https://www.linkedin.com/in/ravulamanohar" target="_blank" rel="noopener" class="text-white hover:text-red-400 transition-colors">linkedin.com/in/ravulamanohar</a>
+              </div>
+
+              <div>
+                <span class="text-xs text-neutral-500 block mb-1">GITHUB</span>
+                <a href="https://github.com/manoharyadavr" target="_blank" rel="noopener" class="text-white hover:text-red-400 transition-colors">github.com/manoharyadavr</a>
+              </div>
+
+              <div>
+                <span class="text-xs text-neutral-500 block mb-1">MANIORA</span>
+                <a href="https://www.maniora.in/" target="_blank" rel="noopener" class="text-red-400 hover:text-red-300 font-bold">www.maniora.in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 12. FOOTER                                                                -->
+  <!-- ========================================================================= -->
+  <footer class="py-12 border-t border-neutral-900 bg-neutral-950 font-mono text-xs text-neutral-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <span class="font-bold text-white">RAVULA MANOHAR YADAV</span>
+        <span>•</span>
+        <span>Full Stack Developer • Founder @ Maniora</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/manoharyadavr" target="_blank" rel="noopener" class="hover:text-neutral-300 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/ravulamanohar" target="_blank" rel="noopener" class="hover:text-neutral-300 transition-colors">LinkedIn</a>
+        <a href="https://www.maniora.in/" target="_blank" rel="noopener" class="hover:text-neutral-300 transition-colors">Maniora</a>
+        <a href="mailto:ravulamanohar8@gmail.com" class="hover:text-neutral-300 transition-colors">Email</a>
+      </div>
+
+      <div>
+        <span>© 2026 Ravula Manohar Yadav. All rights reserved.</span>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================= -->
+  <!-- PROJECT DETAIL MODAL OVERLAY                                              -->
+  <!-- ========================================================================= -->
+  <div id="project-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-neutral-950/80 backdrop-blur-md" aria-hidden="true" role="dialog">
+    <div class="modal-card surface-card rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-6 sm:p-10 relative space-y-6">
+      
+      <!-- Close Button -->
+      <button id="close-modal-btn" aria-label="Close modal" class="absolute top-6 right-6 text-neutral-400 hover:text-white p-2 rounded-lg bg-neutral-900 border border-neutral-800 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="border-b border-neutral-800 pb-6 pr-12 space-y-2">
+        <div class="flex items-center gap-3 font-mono text-xs">
+          <span id="modal-project-number" class="text-red-400 font-bold">01</span>
+          <span id="modal-project-category" class="px-2 py-0.5 bg-neutral-900 border border-neutral-800 text-neutral-300 rounded uppercase">CATEGORY</span>
+        </div>
+        <h2 id="modal-project-name" class="text-2xl sm:text-4xl font-bold text-white">PROJECT NAME</h2>
+        <p id="modal-project-tagline" class="text-neutral-400 text-sm font-mono">Project short tagline here.</p>
+      </div>
+
+      <!-- Overview -->
+      <div class="space-y-2">
+        <h4 class="font-mono text-xs text-neutral-500 uppercase tracking-widest">OVERVIEW</h4>
+        <p id="modal-project-overview" class="text-neutral-200 text-sm sm:text-base leading-relaxed">
+          Detailed overview content.
+        </p>
+      </div>
+
+      <!-- My Role -->
+      <div class="space-y-2 p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80 font-mono text-xs">
+        <span class="text-neutral-500 uppercase tracking-widest block mb-1">MY ROLE & ARCHITECTURE</span>
+        <p id="modal-project-role" class="text-neutral-300 leading-relaxed">
+          Role details.
+        </p>
+      </div>
+
+      <!-- Key Features -->
+      <div class="space-y-3">
+        <h4 class="font-mono text-xs text-neutral-500 uppercase tracking-widest">KEY FEATURES & DELIVERABLES</h4>
+        <ul id="modal-project-features" class="space-y-2 font-sans">
+          <!-- Populated dynamically via JS -->
+        </ul>
+      </div>
+
+      <!-- Tech Stack Tags -->
+      <div class="space-y-3 pt-2 border-t border-neutral-800">
+        <h4 class="font-mono text-xs text-neutral-500 uppercase tracking-widest">TECHNOLOGY STACK</h4>
+        <div id="modal-project-tech" class="flex flex-wrap gap-2">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+
+      <!-- Modal Action -->
+      <div class="pt-4 flex items-center justify-end gap-4 border-t border-neutral-800">
+        <a id="modal-project-live" href="#" target="_blank" rel="noopener" class="btn-primary text-xs">
+          <span>VISIT LIVE PROJECT</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast" class="bg-neutral-900 border border-neutral-700 text-white px-5 py-3 rounded-xl shadow-2xl font-mono text-xs flex items-center gap-3">
+    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+    <span id="toast-message">Notification message</span>
+  </div>
+
+
+  <!-- JavaScript Files -->
+  <script src="js/projects.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>

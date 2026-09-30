@@ -1,0 +1,81 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 1 /Kids [3 0 R] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1100 >>
+stream
+BT
+/F1 18 Tf
+50 720 Td
+(RAVULA MANOHAR YADAV - FULL STACK DEVELOPER) Tj
+/F1 10 Tf
+0 -25 Td
+(Email: ravulamanohar8@gmail.com | Location: Hyderabad, India) Tj
+0 -15 Td
+(LinkedIn: linkedin.com/in/ravulamanohar | GitHub: github.com/manoharyadavr) Tj
+0 -15 Td
+(Website: studio.maniora.in | Maniora: www.maniora.in) Tj
+0 -30 Td
+/F1 14 Tf
+(SUMMARY) Tj
+/F1 10 Tf
+0 -18 Td
+(Full Stack Developer and founder of Maniora based in Hyderabad, India. Focused on building) Tj
+0 -12 Td
+(production-ready web applications, SaaS products, and business platforms across frontend, backend, APIs,) Tj
+0 -12 Td
+(databases, and deployment.) Tj
+0 -25 Td
+/F1 14 Tf
+(TECHNICAL SKILLS) Tj
+/F1 10 Tf
+0 -18 Td
+(Frontend: React.js, Next.js, JavaScript, HTML5, CSS3, Tailwind CSS, Responsive Web Layouts) Tj
+0 -14 Td
+(Backend: Node.js, Express.js, REST APIs, Authentication, Webhooks, PHP, CodeIgniter) Tj
+0 -14 Td
+(Databases: MongoDB, MySQL) Tj
+0 -14 Td
+(DevOps & Tools: Git, GitHub, Linux / VPS, Payment Integrations (Razorpay), Postman) Tj
+0 -25 Td
+/F1 14 Tf
+(WORK EXPERIENCE) Tj
+/F1 10 Tf
+0 -18 Td
+(Founder & Full Stack Developer - Maniora (Jul 2025 - Present | Hyderabad, Telangana)) Tj
+0 -12 Td
+(- Building and deploying full-stack SaaS applications, gallery ecosystems, and DM automation tools.) Tj
+0 -16 Td
+(MERN Full Stack Developer - Build Your Vision (Apr 2025 - Jun 2025 | Hyderabad)) Tj
+0 -12 Td
+(- Worked on full-stack web applications using MERN stack, React interfaces, and Node.js APIs.) Tj
+0 -16 Td
+(Full Stack Developer - Sandblaze Digitals (Mar 2024)) Tj
+0 -12 Td
+(- Contributed to frontend/backend web application development, database integration, and debugging.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000060 00000 n 
+0000000121 00000 n 
+0000000251 00000 n 
+0000001402 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1482
+%%EOF
