@@ -17,12 +17,12 @@ function initSystemMapHover() {
   const telemetryOutput = document.getElementById('telemetry-details');
 
   const telemetryInfo = {
-    'node-idea': 'STAGE 01: REQUIREMENT ANALYSIS & WORKFLOW MAPPING — Deconstructing business objectives into modular technical specs.',
-    'node-architecture': 'STAGE 02: SYSTEM ARCHITECTURE & SCHEMA — Designing scalable database models, API contracts, RBAC & security boundaries.',
-    'node-frontend': 'STAGE 03: FRONTEND CRAFT & UX — Building responsive, accessible React/HTML5 interfaces with fluid micro-interactions.',
-    'node-api': 'STAGE 04: REST API & MIDDLEWARE — Authoring secure Express/Node.js endpoints, JWT auth, input validation & Webhooks.',
-    'node-database': 'STAGE 05: DATABASE & INDEXING — MongoDB aggregation pipelines, MySQL schema optimization, and transaction safety.',
-    'node-deployment': 'STAGE 06: CI/CD & PRODUCTION DEPLOYMENT — Provisioning VPS, NGINX reverse proxies, SSL certificates & health monitoring.'
+    'node-idea': '1. IDEA & PLANNING — Mapping user needs and sketching product flows before touching code.',
+    'node-architecture': '2. ARCHITECTURE — Designing database schemas, REST API endpoints, and auth flows.',
+    'node-frontend': '3. FRONTEND — Crafting fast, clean, responsive interfaces with React.js and Tailwind CSS.',
+    'node-api': '4. REST API — Writing secure Node.js & Express endpoints with clean validation.',
+    'node-database': '5. DATABASE — Modeling data with MongoDB and MySQL for fast queries.',
+    'node-deployment': '6. DEPLOYMENT — Hosting on VPS servers with NGINX, SSL certificates, and CI/CD.'
   };
 
   nodes.forEach(node => {
@@ -36,7 +36,7 @@ function initSystemMapHover() {
 
     node.addEventListener('mouseleave', () => {
       if (telemetryOutput) {
-        telemetryOutput.textContent = 'SYSTEM TELEMETRY: REAL-TIME ARCHITECTURE PIPELINE // SELECT NODE TO INSPECT SPECS';
+        telemetryOutput.textContent = 'Hover or tap any step above to see how I build products end-to-end.';
         telemetryOutput.classList.remove('text-red-400');
       }
     });
@@ -57,8 +57,8 @@ function initScrollObservers() {
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -30px 0px'
   });
 
   elements.forEach(el => observer.observe(el));
@@ -110,7 +110,7 @@ function initActiveSectionNav() {
       }
     });
   }, {
-    threshold: 0.35
+    threshold: 0.3
   });
 
   sections.forEach(sec => observer.observe(sec));

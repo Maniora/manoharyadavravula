@@ -8,18 +8,18 @@ const PROJECTS_DATA = {
     number: "01",
     name: "MANIORA STUDIO",
     category: "B2B2C SAAS PLATFORM",
-    tagline: "Full-stack SaaS ecosystem for photography studios with gallery workflows, contract management, and multi-tenant accounts.",
+    tagline: "Full-stack SaaS platform for photography studios with client galleries, contract signing, and automated invoices.",
     liveUrl: null,
     githubUrl: null,
-    overview: "MANIORA STUDIO is a comprehensive multi-tenant SaaS application engineered to streamline business operations for photography studios and creative agencies. The platform covers client onboarding, gallery sharing, automated invoicing, digital contract signing, and client management.",
-    role: "Architect & Lead Full Stack Developer — Designed and implemented full-stack architecture, REST APIs, database schemas, authentication, payment integration, and cloud deployment.",
+    overview: "MANIORA STUDIO is a multi-tenant SaaS application built to help photography studios manage their daily business. Studios get their own portal to handle client bookings, share photo galleries, issue digital contracts, and send automated invoices.",
+    role: "Full Stack Developer & Founder — Designed the database architecture, REST APIs, authentication system, Razorpay payment flow, and responsive client portal.",
     features: [
-      "Multi-tenant architecture separating studio workspaces and data isolation.",
-      "Digital & live photo galleries with high-resolution image delivery and client selection.",
-      "Contract management with electronic signatures and client approval tracking.",
-      "Automated invoicing and payment processing via Razorpay integration.",
-      "Role-Based Access Control (RBAC) for studio admins, team members, and clients.",
-      "Mobile-responsive client viewing portal optimized for fast image loading."
+      "Multi-tenant architecture separating studio accounts and client data safely.",
+      "Digital galleries where clients can view, select, and download high-res photos.",
+      "Contract management with electronic signatures for client sign-offs.",
+      "Automated invoicing and online payment processing via Razorpay.",
+      "Role-Based Access Control (RBAC) for studio owners, team members, and clients.",
+      "Fast mobile photo viewer built for smooth mobile browsing."
     ],
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Razorpay API", "JWT Auth"],
     badge: "FEATURED SAAS"
@@ -29,18 +29,18 @@ const PROJECTS_DATA = {
     number: "02",
     name: "MANIORA DM AUTOMATION",
     category: "INSTAGRAM AUTOMATION SAAS",
-    tagline: "Instagram automation platform integrating Meta/Instagram APIs for direct messaging and automated workflow triggers.",
+    tagline: "Instagram messaging platform that automates comment replies and DM workflows using Meta APIs.",
     liveUrl: "https://chat.maniora.in/",
     githubUrl: null,
-    overview: "MANIORA DM AUTOMATION is an Instagram interaction and messaging engine built on top of official Meta Graph APIs. It enables businesses and creators to automate comment responses, DM keyword triggers, lead capture sequences, and follow-up messaging workflows.",
-    role: "Full Stack Developer — Engineered Meta Webhook consumers, background job queues, rate-limiting handlers, token management, and administrative portal.",
+    overview: "MANIORA DM AUTOMATION is an Instagram automation tool built on official Meta Graph APIs. It helps creators and businesses automatically reply to post comments, send direct messages based on keywords, and capture incoming leads.",
+    role: "Full Stack Developer — Built real-time Meta Webhook listeners, message dispatch queues, token renewal logic, and administrative dashboard.",
     features: [
-      "Official Meta Graph API integration with secure OAuth token renewal.",
-      "Real-time Instagram comment detection via Webhook listeners.",
-      "Automated direct messaging (DM) dispatch with keyword matching.",
-      "Queue management to ensure adherence to Meta API rate limits.",
-      "Contact lead capturing and database indexing for follow-ups.",
-      "Analytics dashboard monitoring trigger counts and execution logs."
+      "Official Meta Graph API integration with OAuth token management.",
+      "Real-time comment detection via Meta Webhooks.",
+      "Instant DM responses based on predefined keyword triggers.",
+      "Rate-limit queue handling to comply with Meta API guidelines.",
+      "Lead capture database for following up with interested clients.",
+      "Dashboard tracking message delivery stats and trigger logs."
     ],
     techStack: ["Node.js", "Express.js", "Meta Graph API", "MongoDB", "Webhooks", "JavaScript", "Linux / VPS"],
     badge: "AUTOMATION ENGINE"
@@ -50,18 +50,18 @@ const PROJECTS_DATA = {
     number: "03",
     name: "PIXELFABLE18",
     category: "E-COMMERCE PLATFORM",
-    tagline: "Digital products e-commerce platform with product catalog, secure checkout, Razorpay, and instant digital file delivery.",
+    tagline: "Digital products store for selling Lightroom presets with instant file delivery upon payment.",
     liveUrl: "https://pixelfable18.in/",
     githubUrl: null,
-    overview: "PIXELFABLE18 is a specialized e-commerce web platform created for selling digital assets and photo presets. It provides an intuitive storefront for customers and a full management portal for product inventory, order verification, and digital delivery.",
-    role: "Full Stack Developer — Built end-to-end e-commerce flow including cart management, payment webhooks, database relations, and instant SMTP email file delivery.",
+    overview: "PIXELFABLE18 is an e-commerce platform built for selling digital photo presets and assets. Customers can browse preset packs, pay securely online, and receive download links instantly in their email.",
+    role: "Full Stack Developer — Built storefront interface, shopping cart, payment integration, admin panel, and automated email delivery system.",
     features: [
-      "Custom product catalog with detailed preview media and pricing.",
-      "Streamlined shopping cart and checkout pipeline.",
-      "Secure payment gateway integration with Razorpay.",
-      "Instant automated email delivery of digital download links via SMTP.",
-      "Protected admin panel for inventory, sales analytics, and manual order updates.",
-      "Mobile-optimized responsive user experience."
+      "Clean product store showcasing preset previews and pricing.",
+      "Smooth shopping cart and checkout experience.",
+      "Secure online payment gateway integration using Razorpay.",
+      "Instant automated email delivery of digital download links after purchase.",
+      "Admin dashboard to manage products, view sales, and check orders.",
+      "Responsive design optimized for mobile buyers."
     ],
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Razorpay API", "Nodemailer / SMTP"],
     badge: "E-COMMERCE"
@@ -71,18 +71,18 @@ const PROJECTS_DATA = {
     number: "04",
     name: "NUMBER SORTING SYSTEM",
     category: "BUSINESS DATA PROCESSING",
-    tagline: "High-volume data processing platform for classifying mobile datasets by telecom prefix, operator, and region.",
+    tagline: "Business tool for processing, cleaning, and sorting large lists of mobile numbers by operator and region.",
     liveUrl: "https://sortifyy.cloud/",
     githubUrl: null,
-    overview: "A specialized business data utility built to handle, clean, and categorize tens of thousands of contact numbers. The platform parses uploaded Excel files, strips duplicates, tags telecom operators, and organizes regional databases for operational teams.",
-    role: "Full Stack Developer — Built database schema, file parsing engine, query optimization, pagination, and multi-user administrative system.",
+    overview: "A custom business utility built to process tens of thousands of contact numbers efficiently. Teams can upload Excel files, clean duplicate numbers, identify mobile operators, and filter data by region for marketing campaigns.",
+    role: "Full Stack Developer — Created the database schema, Excel parsing engine, search filters, pagination, and multi-user dashboard.",
     features: [
-      "Bulk Excel dataset uploading and automated row parsing.",
-      "Duplicate number detection and data cleansing algorithms.",
-      "Telecom operator and circle/region mapping by mobile prefix.",
-      "Advanced multi-parameter search, filtering, and pagination.",
-      "Lead follow-up status tracking for operational staff.",
-      "Export capability back into standardized Excel / CSV reports."
+      "Bulk Excel file parsing and data extraction.",
+      "Duplicate number detection and automatic data cleaning.",
+      "Telecom operator and regional circle mapping by mobile prefix.",
+      "Fast search, filtering, and paginated data tables.",
+      "Follow-up status tracking for sales and operations teams.",
+      "Export sorted datasets back into clean Excel/CSV files."
     ],
     techStack: ["PHP", "CodeIgniter", "MySQL", "JavaScript", "Bootstrap", "Spreadsheet Parsers"],
     badge: "ENTERPRISE TOOL"
@@ -92,17 +92,17 @@ const PROJECTS_DATA = {
     number: "05",
     name: "THE KAHANI CREW",
     category: "EVENT MANAGEMENT & PHOTOGRAPHY",
-    tagline: "High-performance brand showcase website for an event management and photography production studio.",
+    tagline: "Custom brand website built to showcase event portfolios and wedding stories.",
     liveUrl: "https://thekahanicrew.com/",
     githubUrl: null,
-    overview: "A custom web application built for The Kahani Crew to present event portfolios, wedding stories, and creative services. The design focuses on rich visual storytelling, ultra-fast image loading, and effortless client contact.",
-    role: "Frontend Developer & Designer — Designed custom layout, image compression pipeline, interactive gallery filters, and mobile experience.",
+    overview: "A custom website created for The Kahani Crew event management studio. The site showcases wedding photography, event highlights, and creative services with fast image loading and mobile-friendly layouts.",
+    role: "Frontend Developer & Designer — Designed the layout, image compression flow, gallery filters, and mobile experience.",
     features: [
-      "Editorial masonry visual galleries with fluid image popups.",
-      "Responsive layout optimized across desktop, tablet, and mobile screens.",
-      "Custom event category filtering and story previews.",
-      "Fast page loads with lazy-loaded media assets.",
-      "Integrated booking inquiry forms."
+      "Grid image galleries with full-screen lightboxes.",
+      "Responsive layout built for desktop, tablet, and mobile screens.",
+      "Category filtering for weddings, corporate events, and stories.",
+      "Optimized images for fast loading speed.",
+      "Simple booking inquiry form for prospective clients."
     ],
     techStack: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Responsive Design"],
     badge: "PORTFOLIO SITE"
@@ -112,16 +112,16 @@ const PROJECTS_DATA = {
     number: "06",
     name: "4KMEDIA",
     category: "DIGITAL MARKETING AGENCY",
-    tagline: "Custom agency website featuring interactive graphics, structured service breakdowns, and conversion funnels.",
+    tagline: "Agency website with interactive service breakdowns and marketing funnels.",
     liveUrl: "https://4kmedia.in/",
     githubUrl: null,
-    overview: "Official digital presence for 4KMedia digital marketing agency. The site showcases agency services, client case studies, and marketing packages with custom illustrations and engaging micro-interactions.",
-    role: "Frontend Engineer — Implemented responsive UI components, service showcases, smooth animations, and lead capture forms.",
+    overview: "Official website for 4KMedia, a digital marketing agency in Hyderabad. The platform highlights marketing services, client work, and growth strategies with custom graphics and clear call-to-actions.",
+    role: "Frontend Engineer — Developed responsive UI components, service breakdowns, interactive cards, and contact forms.",
     features: [
-      "Interactive agency service grid and strategic marketing breakdowns.",
-      "Animated custom graphics and hero elements.",
-      "Clean corporate typography and visual brand consistency.",
-      "Optimized performance and SEO metadata structure."
+      "Interactive agency service grid explaining marketing strategies.",
+      "Custom graphic illustrations and animated cards.",
+      "Clean corporate design and typography.",
+      "Optimized performance and fast page load times."
     ],
     techStack: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS", "SEO Optimization"],
     badge: "AGENCY SITE"
@@ -155,15 +155,15 @@ function openProjectModal(projectId) {
 
   // Render Features list
   modalFeatures.innerHTML = data.features.map(feat => `
-    <li class="flex items-start gap-3 text-sm text-neutral-300">
-      <span class="text-red-500 mt-1">▸</span>
+    <li class="flex items-start gap-3 text-xs sm:text-sm text-neutral-300">
+      <span class="text-red-500 mt-0.5 sm:mt-1">▸</span>
       <span>${feat}</span>
     </li>
   `).join('');
 
   // Render Tech Stack tags
   modalTech.innerHTML = data.techStack.map(tech => `
-    <span class="px-3 py-1 text-xs font-mono bg-neutral-900 border border-neutral-800 text-neutral-300 rounded">
+    <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 border border-neutral-800 text-neutral-300 rounded">
       ${tech}
     </span>
   `).join('');
