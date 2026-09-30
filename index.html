@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -23,10 +23,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Plus Jakarta Sans + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN for utility support -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,15 +36,15 @@
       theme: {
         extend: {
           colors: {
-            bg: '#0c0d0e',
-            surface: '#131417',
-            surfaceElevated: '#1f2026',
-            accent: '#ef4444',
-            accentHover: '#dc2626',
-            textMuted: '#8e919a',
+            bg: '#fafafa',
+            surface: '#ffffff',
+            surfaceElevated: '#ffffff',
+            accent: '#dc2626',
+            accentHover: '#b91c1c',
+            textMuted: '#64748b',
           },
           fontFamily: {
-            sans: ['Space Grotesk', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace'],
           }
         }
@@ -55,44 +55,44 @@
   <!-- Custom Master CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-[#0c0d0e] text-[#f4f4f0] antialiased min-h-screen selection:bg-red-500 selection:text-white relative tech-grid-bg">
+<body class="bg-[#fafafa] text-[#0f172a] antialiased min-h-screen selection:bg-red-600 selection:text-white relative tech-grid-bg">
 
   <!-- ========================================================================= -->
   <!-- 1. NAVIGATION BAR                                                         -->
   <!-- ========================================================================= -->
-  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent" id="main-nav">
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent bg-white/80 backdrop-blur-md" id="main-nav">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
       
       <!-- Brand Logo / Monogram -->
       <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group">
-        <span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block shadow-[0_0_10px_#ef4444]"></span>
-        <span class="font-mono font-bold tracking-tight text-base sm:text-lg text-white group-hover:text-red-400 transition-colors">
-          RMY<span class="text-red-500">.</span>
+        <span class="w-2.5 h-2.5 rounded-full bg-red-600 inline-block shadow-[0_0_10px_rgba(220,38,38,0.5)]"></span>
+        <span class="font-mono font-bold tracking-tight text-base sm:text-lg text-slate-900 group-hover:text-red-600 transition-colors">
+          RMY<span class="text-red-600">.</span>
         </span>
-        <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono uppercase bg-neutral-900 border border-neutral-800 text-neutral-400 rounded">
+        <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono uppercase bg-slate-100 border border-slate-200 text-slate-600 rounded">
           DEVELOPER & FOUNDER
         </span>
       </a>
 
       <!-- Desktop Nav Links -->
       <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs lg:text-sm font-mono tracking-wider">
-        <a href="#about" class="nav-link text-neutral-400 hover:text-white transition-colors">ABOUT</a>
-        <a href="#experience" class="nav-link text-neutral-400 hover:text-white transition-colors">EXPERIENCE</a>
-        <a href="#work" class="nav-link text-neutral-400 hover:text-white transition-colors">WORK</a>
-        <a href="#approach" class="nav-link text-neutral-400 hover:text-white transition-colors">HOW I BUILD</a>
-        <a href="#contact" class="nav-link text-neutral-400 hover:text-white transition-colors">CONTACT</a>
+        <a href="#about" class="nav-link text-slate-600 hover:text-slate-900 transition-colors">ABOUT</a>
+        <a href="#experience" class="nav-link text-slate-600 hover:text-slate-900 transition-colors">EXPERIENCE</a>
+        <a href="#work" class="nav-link text-slate-600 hover:text-slate-900 transition-colors">WORK</a>
+        <a href="#approach" class="nav-link text-slate-600 hover:text-slate-900 transition-colors">HOW I BUILD</a>
+        <a href="#contact" class="nav-link text-slate-600 hover:text-slate-900 transition-colors">CONTACT</a>
       </nav>
 
       <!-- Desktop Action CTA -->
       <div class="hidden md:flex items-center gap-4">
-        <a href="assets/resume.pdf" download target="_blank" class="px-3.5 py-1.5 lg:px-4 lg:py-2 text-xs font-mono font-medium border border-neutral-700 hover:border-red-500/50 text-white rounded bg-neutral-900/60 hover:bg-neutral-800 transition-all duration-200 flex items-center gap-2">
+        <a href="assets/resume.pdf" download target="_blank" class="px-3.5 py-1.5 lg:px-4 lg:py-2 text-xs font-mono font-medium border border-slate-300 hover:border-red-600/50 text-slate-900 rounded bg-white hover:bg-slate-50 transition-all duration-200 flex items-center gap-2 shadow-sm">
           <span>RESUME</span>
-          <svg class="w-3.5 h-3.5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <svg class="w-3.5 h-3.5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
         </a>
       </div>
 
       <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" class="md:hidden p-2 text-neutral-400 hover:text-white focus:outline-none rounded-lg border border-neutral-800/80 bg-neutral-900/50">
+      <button id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none rounded-lg border border-slate-200 bg-white shadow-sm">
         <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -102,29 +102,29 @@
   </header>
 
   <!-- Mobile Drawer Menu -->
-  <div id="mobile-menu-drawer" class="hidden fixed inset-0 z-40 bg-neutral-950/95 backdrop-blur-2xl md:hidden pt-20 px-6 overflow-y-auto">
+  <div id="mobile-menu-drawer" class="hidden fixed inset-0 z-40 bg-white/95 backdrop-blur-2xl md:hidden pt-20 px-6 overflow-y-auto">
     <nav class="flex flex-col gap-5 text-base sm:text-lg font-mono pt-4">
-      <a href="#about" class="mobile-nav-link text-neutral-300 hover:text-red-400 py-3 border-b border-neutral-800 flex items-center justify-between">
+      <a href="#about" class="mobile-nav-link text-slate-700 hover:text-red-600 py-3 border-b border-slate-200 flex items-center justify-between">
         <span>ABOUT ME</span>
-        <span class="text-xs text-neutral-600">▸</span>
+        <span class="text-xs text-slate-400">▸</span>
       </a>
-      <a href="#experience" class="mobile-nav-link text-neutral-300 hover:text-red-400 py-3 border-b border-neutral-800 flex items-center justify-between">
+      <a href="#experience" class="mobile-nav-link text-slate-700 hover:text-red-600 py-3 border-b border-slate-200 flex items-center justify-between">
         <span>EXPERIENCE</span>
-        <span class="text-xs text-neutral-600">▸</span>
+        <span class="text-xs text-slate-400">▸</span>
       </a>
-      <a href="#work" class="mobile-nav-link text-neutral-300 hover:text-red-400 py-3 border-b border-neutral-800 flex items-center justify-between">
+      <a href="#work" class="mobile-nav-link text-slate-700 hover:text-red-600 py-3 border-b border-slate-200 flex items-center justify-between">
         <span>MY WORK</span>
-        <span class="text-xs text-neutral-600">▸</span>
+        <span class="text-xs text-slate-400">▸</span>
       </a>
-      <a href="#approach" class="mobile-nav-link text-neutral-300 hover:text-red-400 py-3 border-b border-neutral-800 flex items-center justify-between">
+      <a href="#approach" class="mobile-nav-link text-slate-700 hover:text-red-600 py-3 border-b border-slate-200 flex items-center justify-between">
         <span>HOW I BUILD</span>
-        <span class="text-xs text-neutral-600">▸</span>
+        <span class="text-xs text-slate-400">▸</span>
       </a>
-      <a href="#contact" class="mobile-nav-link text-neutral-300 hover:text-red-400 py-3 border-b border-neutral-800 flex items-center justify-between">
+      <a href="#contact" class="mobile-nav-link text-slate-700 hover:text-red-600 py-3 border-b border-slate-200 flex items-center justify-between">
         <span>GET IN TOUCH</span>
-        <span class="text-xs text-neutral-600">▸</span>
+        <span class="text-xs text-slate-400">▸</span>
       </a>
-      <a href="assets/resume.pdf" download class="mt-6 px-6 py-3.5 bg-red-600 hover:bg-red-700 text-white font-semibold text-center rounded-lg flex items-center justify-center gap-2 text-sm shadow-lg shadow-red-900/30">
+      <a href="assets/resume.pdf" download class="mt-6 px-6 py-3.5 bg-red-600 hover:bg-red-700 text-white font-semibold text-center rounded-lg flex items-center justify-center gap-2 text-sm shadow-md">
         <span>DOWNLOAD RESUME PDF</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
       </a>
@@ -144,37 +144,37 @@
         
         <!-- Identity Status Badges -->
         <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-[11px] sm:text-xs font-mono">
-          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300">
-            <span class="pulse-dot w-2 h-2 rounded-full bg-red-500"></span>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 shadow-sm">
+            <span class="pulse-dot w-2 h-2 rounded-full bg-red-600"></span>
             FULL STACK DEVELOPER
           </span>
-          <span class="px-3 py-1 rounded-full bg-neutral-900/60 border border-neutral-800 text-neutral-400">
+          <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600">
             FOUNDER @ MANIORA
           </span>
-          <span class="px-3 py-1 rounded-full bg-neutral-900/40 border border-neutral-800/80 text-neutral-500">
+          <span class="px-3 py-1 rounded-full bg-slate-100/80 border border-slate-200/80 text-slate-500">
             HYDERABAD, INDIA
           </span>
         </div>
 
         <!-- Name & Primary Title -->
         <div>
-          <h1 class="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1] text-white">
+          <h1 class="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.1] text-slate-900">
             RAVULA MANOHAR <br class="hidden sm:inline">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-neutral-200">
-              YADAV<span class="text-red-500">.</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-slate-800">
+              YADAV<span class="text-red-600">.</span>
             </span>
           </h1>
-          <p class="mt-2.5 sm:mt-3 text-[11px] sm:text-xs md:text-sm font-mono text-red-400/90 tracking-wider sm:tracking-widest uppercase">
+          <p class="mt-2.5 sm:mt-3 text-[11px] sm:text-xs md:text-sm font-mono text-red-600 font-semibold tracking-wider sm:tracking-widest uppercase">
             MERN / REACT.JS / NODE.JS / EXPRESS / MONGODB / MYSQL
           </p>
         </div>
 
         <!-- Statements -->
         <div class="space-y-3 sm:space-y-4 max-w-2xl">
-          <p class="text-lg sm:text-2xl font-normal text-neutral-100 leading-snug">
+          <p class="text-lg sm:text-2xl font-normal text-slate-800 leading-snug">
             "Building production-ready web applications, SaaS products and business platforms from idea to deployment."
           </p>
-          <p class="text-xs sm:text-base text-neutral-400 leading-relaxed">
+          <p class="text-xs sm:text-base text-slate-600 leading-relaxed">
             Full Stack Developer and founder of Maniora, focused on building practical digital products across frontend, backend, APIs, databases and deployment.
           </p>
         </div>
@@ -188,23 +188,23 @@
 
           <a href="assets/resume.pdf" download class="btn-secondary">
             <span>DOWNLOAD RESUME</span>
-            <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
           </a>
         </div>
 
         <!-- Social & Quick Links -->
-        <div class="pt-5 border-t border-neutral-900 flex flex-wrap items-center gap-4 sm:gap-6 text-xs font-mono text-neutral-400">
-          <a href="https://www.linkedin.com/in/ravulamanohar" target="_blank" rel="noopener" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
+        <div class="pt-5 border-t border-slate-200 flex flex-wrap items-center gap-4 sm:gap-6 text-xs font-mono text-slate-600">
+          <a href="https://www.linkedin.com/in/ravulamanohar" target="_blank" rel="noopener" class="hover:text-red-600 transition-colors flex items-center gap-1.5">
             <span>LINKEDIN</span>
-            <svg class="w-3 h-3 text-neutral-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.64a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2Z"/></svg>
+            <svg class="w-3 h-3 text-slate-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.64a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2Z"/></svg>
           </a>
 
-          <a href="https://github.com/manoharyadavr" target="_blank" rel="noopener" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
+          <a href="https://github.com/manoharyadavr" target="_blank" rel="noopener" class="hover:text-red-600 transition-colors flex items-center gap-1.5">
             <span>GITHUB</span>
-            <svg class="w-3 h-3 text-neutral-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+            <svg class="w-3 h-3 text-slate-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
           </a>
 
-          <a href="https://www.maniora.in/" target="_blank" rel="noopener" class="text-red-400 hover:text-red-300 font-bold transition-colors flex items-center gap-1">
+          <a href="https://www.maniora.in/" target="_blank" rel="noopener" class="text-red-600 hover:text-red-700 font-bold transition-colors flex items-center gap-1">
             <span>VISIT MANIORA →</span>
           </a>
         </div>
@@ -213,15 +213,15 @@
 
       <!-- Hero Right Interactive System Map Graphic -->
       <div class="lg:col-span-5 reveal-on-scroll delay-200">
-        <div class="surface-card rounded-xl p-4 sm:p-6 relative overflow-hidden">
+        <div class="surface-card rounded-xl p-4 sm:p-6 relative overflow-hidden bg-white border border-slate-200 shadow-sm">
           
           <!-- Monospace Card Header -->
-          <div class="flex items-center justify-between pb-3 sm:pb-4 mb-3 sm:mb-4 border-b border-neutral-800 text-[11px] sm:text-xs font-mono">
-            <span class="text-red-400 font-semibold flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+          <div class="flex items-center justify-between pb-3 sm:pb-4 mb-3 sm:mb-4 border-b border-slate-200 text-[11px] sm:text-xs font-mono">
+            <span class="text-red-600 font-semibold flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
               HOW I BUILD PRODUCTS
             </span>
-            <span class="text-neutral-500">END-TO-END</span>
+            <span class="text-slate-400">END-TO-END</span>
           </div>
 
           <!-- Interactive SVG System Diagram -->
@@ -229,65 +229,65 @@
             <svg class="w-full h-auto max-w-full" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
               
               <!-- Connecting Paths -->
-              <path d="M 70 50 L 200 50 L 330 50 L 330 160 L 200 160 L 70 160 L 70 270 L 200 270 L 330 270" stroke="#262626" stroke-width="2"/>
-              <path d="M 70 50 L 200 50 L 330 50 L 330 160 L 200 160 L 70 160 L 70 270 L 200 270 L 330 270" stroke="#ef4444" stroke-width="2" class="node-path" stroke-opacity="0.6"/>
+              <path d="M 70 50 L 200 50 L 330 50 L 330 160 L 200 160 L 70 160 L 70 270 L 200 270 L 330 270" stroke="#e2e8f0" stroke-width="2"/>
+              <path d="M 70 50 L 200 50 L 330 50 L 330 160 L 200 160 L 70 160 L 70 270 L 200 270 L 330 270" stroke="#dc2626" stroke-width="2" class="node-path" stroke-opacity="0.7"/>
 
               <!-- NODE 1: IDEA -->
               <g class="node-group system-map-node cursor-pointer" data-node-id="node-idea">
-                <rect x="25" y="25" width="90" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
-                <circle cx="70" cy="50" r="4" fill="#ef4444" class="node-circle" />
-                <text x="70" y="54" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">01. IDEA</text>
+                <rect x="25" y="25" width="90" height="50" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+                <circle cx="70" cy="50" r="4" fill="#dc2626" class="node-circle" />
+                <text x="70" y="54" text-anchor="middle" fill="#0f172a" font-family="JetBrains Mono" font-size="10" font-weight="600">01. IDEA</text>
               </g>
 
               <!-- NODE 2: ARCHITECTURE -->
               <g class="node-group system-map-node cursor-pointer" data-node-id="node-architecture">
-                <rect x="140" y="25" width="120" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
-                <circle cx="200" cy="50" r="4" fill="#ef4444" class="node-circle" />
-                <text x="200" y="54" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">02. ARCHITECTURE</text>
+                <rect x="140" y="25" width="120" height="50" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+                <circle cx="200" cy="50" r="4" fill="#dc2626" class="node-circle" />
+                <text x="200" y="54" text-anchor="middle" fill="#0f172a" font-family="JetBrains Mono" font-size="10" font-weight="600">02. ARCHITECTURE</text>
               </g>
 
               <!-- NODE 3: FRONTEND -->
               <g class="node-group system-map-node cursor-pointer" data-node-id="node-frontend">
-                <rect x="280" y="25" width="100" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
-                <circle cx="330" cy="50" r="4" fill="#ef4444" class="node-circle" />
-                <text x="330" y="54" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">03. FRONTEND</text>
+                <rect x="280" y="25" width="100" height="50" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+                <circle cx="330" cy="50" r="4" fill="#dc2626" class="node-circle" />
+                <text x="330" y="54" text-anchor="middle" fill="#0f172a" font-family="JetBrains Mono" font-size="10" font-weight="600">03. FRONTEND</text>
               </g>
 
               <!-- NODE 4: API -->
               <g class="node-group system-map-node cursor-pointer" data-node-id="node-api">
-                <rect x="285" y="135" width="90" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
-                <circle cx="330" cy="160" r="4" fill="#ef4444" class="node-circle" />
-                <text x="330" y="164" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">04. REST API</text>
+                <rect x="285" y="135" width="90" height="50" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+                <circle cx="330" cy="160" r="4" fill="#dc2626" class="node-circle" />
+                <text x="330" y="164" text-anchor="middle" fill="#0f172a" font-family="JetBrains Mono" font-size="10" font-weight="600">04. REST API</text>
               </g>
 
               <!-- NODE 5: DATABASE -->
               <g class="node-group system-map-node cursor-pointer" data-node-id="node-database">
-                <rect x="145" y="135" width="110" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
-                <circle cx="200" cy="160" r="4" fill="#ef4444" class="node-circle" />
-                <text x="200" y="164" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">05. DATABASE</text>
+                <rect x="145" y="135" width="110" height="50" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+                <circle cx="200" cy="160" r="4" fill="#dc2626" class="node-circle" />
+                <text x="200" y="164" text-anchor="middle" fill="#0f172a" font-family="JetBrains Mono" font-size="10" font-weight="600">05. DATABASE</text>
               </g>
 
               <!-- NODE 6: DEPLOYMENT -->
               <g class="node-group system-map-node cursor-pointer" data-node-id="node-deployment">
-                <rect x="15" y="135" width="110" height="50" rx="6" fill="#131417" stroke="#333" stroke-width="1.5" />
-                <circle cx="70" cy="160" r="4" fill="#ef4444" class="node-circle" />
-                <text x="70" y="164" text-anchor="middle" fill="#f4f4f0" font-family="JetBrains Mono" font-size="10" font-weight="600">06. DEPLOYMENT</text>
+                <rect x="15" y="135" width="110" height="50" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+                <circle cx="70" cy="160" r="4" fill="#dc2626" class="node-circle" />
+                <text x="70" y="164" text-anchor="middle" fill="#0f172a" font-family="JetBrains Mono" font-size="10" font-weight="600">06. DEPLOYMENT</text>
               </g>
 
               <!-- Central Active Metric Indicator -->
-              <rect x="100" y="245" width="200" height="48" rx="6" fill="#0c0d0e" stroke="#ef4444" stroke-width="1" stroke-dasharray="4 4" />
-              <text x="200" y="268" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="11" font-weight="700">✓ PRODUCTION READY</text>
-              <text x="200" y="283" text-anchor="middle" fill="#8e919a" font-family="JetBrains Mono" font-size="9">FROM CONCEPT TO LAUNCH</text>
+              <rect x="100" y="245" width="200" height="48" rx="6" fill="#f8fafc" stroke="#dc2626" stroke-width="1" stroke-dasharray="4 4" />
+              <text x="200" y="268" text-anchor="middle" fill="#dc2626" font-family="JetBrains Mono" font-size="11" font-weight="700">✓ PRODUCTION READY</text>
+              <text x="200" y="283" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono" font-size="9">FROM CONCEPT TO LAUNCH</text>
             </svg>
           </div>
 
           <!-- Interactive Step Inspector Box -->
-          <div class="mt-3 sm:mt-4 pt-3 border-t border-neutral-800 bg-neutral-950 p-3 rounded font-mono text-[10px] sm:text-[11px] leading-relaxed">
-            <div class="text-neutral-500 mb-1 flex items-center justify-between">
+          <div class="mt-3 sm:mt-4 pt-3 border-t border-slate-200 bg-slate-50 p-3 rounded font-mono text-[10px] sm:text-[11px] leading-relaxed">
+            <div class="text-slate-500 mb-1 flex items-center justify-between">
               <span>WORKFLOW STAGE</span>
               <span class="hidden sm:inline">HOVER OR TAP A STEP</span>
             </div>
-            <p id="telemetry-details" class="text-neutral-300 transition-colors duration-200">
+            <p id="telemetry-details" class="text-slate-700 transition-colors duration-200">
               Hover or tap any step above to see how I build products end-to-end.
             </p>
           </div>
@@ -302,27 +302,27 @@
   <!-- ========================================================================= -->
   <!-- 3. TECHNICAL IDENTITY STRIP                                              -->
   <!-- ========================================================================= -->
-  <section id="tech-strip" class="py-5 sm:py-6 border-y border-neutral-800/80 bg-neutral-950/60 overflow-hidden">
+  <section id="tech-strip" class="py-5 sm:py-6 border-y border-slate-200 bg-white/70 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
       
-      <div class="flex items-center gap-2.5 shrink-0 font-mono text-[11px] sm:text-xs text-red-400 font-semibold tracking-wider">
-        <span class="w-2 h-2 rounded-full bg-red-500"></span>
+      <div class="flex items-center gap-2.5 shrink-0 font-mono text-[11px] sm:text-xs text-red-600 font-semibold tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-red-600"></span>
         <span>MY TECH STACK:</span>
       </div>
 
       <!-- Marquee / Scrollable tech list -->
-      <div class="overflow-x-auto w-full no-scrollbar flex items-center gap-2.5 sm:gap-3 text-xs font-mono text-neutral-300 py-1">
-        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">React.js</span>
-        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Node.js</span>
-        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Express.js</span>
-        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">MongoDB</span>
-        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">MySQL</span>
-        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Next.js</span>
-        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">JavaScript (ES6+)</span>
-        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">REST APIs</span>
-        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Git & GitHub</span>
-        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Linux / VPS</span>
-        <span class="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded shrink-0">Tailwind CSS</span>
+      <div class="overflow-x-auto w-full no-scrollbar flex items-center gap-2.5 sm:gap-3 text-xs font-mono text-slate-700 py-1">
+        <span class="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded shrink-0">React.js</span>
+        <span class="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded shrink-0">Node.js</span>
+        <span class="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded shrink-0">Express.js</span>
+        <span class="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded shrink-0">MongoDB</span>
+        <span class="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded shrink-0">MySQL</span>
+        <span class="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded shrink-0">Next.js</span>
+        <span class="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded shrink-0">JavaScript (ES6+)</span>
+        <span class="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded shrink-0">REST APIs</span>
+        <span class="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded shrink-0">Git & GitHub</span>
+        <span class="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded shrink-0">Linux / VPS</span>
+        <span class="px-3 py-1.5 bg-slate-100 border border-slate-200 rounded shrink-0">Tailwind CSS</span>
       </div>
 
     </div>
@@ -339,21 +339,21 @@
         
         <!-- Left Section Heading & Authentic Copy -->
         <div class="lg:col-span-7 space-y-5 sm:space-y-6 reveal-on-scroll">
-          <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest">
+          <p class="font-mono text-xs text-red-600 font-semibold uppercase tracking-widest">
             ABOUT ME
           </p>
-          <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+          <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
             Full Stack Developer & Founder
           </h2>
 
-          <div class="space-y-4 text-neutral-300 text-sm sm:text-base md:text-lg leading-relaxed pt-1 sm:pt-2">
+          <div class="space-y-4 text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed pt-1 sm:pt-2">
             <p>
               I'm a Full Stack Developer and the founder of Maniora, based in Hyderabad, India.
             </p>
             <p>
               I build web applications, SaaS products, and business tools across the full stack — from designing React user interfaces and building Node.js REST APIs to setting up MongoDB/MySQL databases and deploying on cloud servers.
             </p>
-            <p class="text-neutral-400">
+            <p class="text-slate-600">
               I enjoy turning complex product requirements into clean, practical code that runs smoothly in production.
             </p>
           </div>
@@ -361,21 +361,21 @@
 
         <!-- Right Developer Profile Image Card -->
         <div class="lg:col-span-5 reveal-on-scroll delay-200">
-          <div class="surface-card rounded-xl p-5 sm:p-8 space-y-6 relative overflow-hidden">
+          <div class="surface-card rounded-xl p-5 sm:p-8 space-y-6 relative overflow-hidden bg-white border border-slate-200">
             
             <!-- Profile Card Visual Header -->
-            <div class="flex items-center gap-4 border-b border-neutral-800 pb-5">
+            <div class="flex items-center gap-4 border-b border-slate-200 pb-5">
               
               <!-- Avatar Illustration Graphic -->
-              <div class="relative w-16 h-16 rounded-full bg-gradient-to-tr from-red-600 via-neutral-900 to-neutral-800 border-2 border-red-500/80 flex items-center justify-center shrink-0 shadow-lg shadow-red-950/50">
+              <div class="relative w-16 h-16 rounded-full bg-gradient-to-tr from-red-600 via-slate-800 to-slate-900 border-2 border-red-500 flex items-center justify-center shrink-0 shadow-md">
                 <span class="font-mono font-bold text-xl text-white">RMY</span>
-                <span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 border-2 border-neutral-950" title="Available for work"></span>
+                <span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white" title="Available for work"></span>
               </div>
 
               <div>
-                <h3 class="font-bold text-lg text-white">Ravula Manohar Yadav</h3>
-                <p class="text-xs font-mono text-red-400">Full Stack Developer • Founder @ Maniora</p>
-                <p class="text-[11px] font-mono text-neutral-500">Hyderabad, Telangana, India</p>
+                <h3 class="font-bold text-lg text-slate-900">Ravula Manohar Yadav</h3>
+                <p class="text-xs font-mono text-red-600 font-semibold">Full Stack Developer • Founder @ Maniora</p>
+                <p class="text-[11px] font-mono text-slate-500">Hyderabad, Telangana, India</p>
               </div>
 
             </div>
@@ -383,24 +383,24 @@
             <!-- Profile Specifications -->
             <div class="space-y-4 text-xs sm:text-sm font-mono">
               <div>
-                <span class="text-[11px] text-neutral-500 block mb-1">PRIMARY STACK</span>
-                <span class="text-white font-medium">React.js • Node.js • Express • MongoDB • MySQL</span>
+                <span class="text-[11px] text-slate-500 block mb-1">PRIMARY STACK</span>
+                <span class="text-slate-900 font-medium">React.js • Node.js • Express • MongoDB • MySQL</span>
               </div>
 
               <div>
-                <span class="text-[11px] text-neutral-500 block mb-1">WHAT I DO</span>
-                <span class="text-neutral-300">Web Applications, SaaS Platforms, REST APIs & Cloud Deployments</span>
+                <span class="text-[11px] text-slate-500 block mb-1">WHAT I DO</span>
+                <span class="text-slate-700">Web Applications, SaaS Platforms, REST APIs & Cloud Deployments</span>
               </div>
 
               <div>
-                <span class="text-[11px] text-neutral-500 block mb-1">FOUNDED COMPANY</span>
-                <a href="https://www.maniora.in/" target="_blank" rel="noopener" class="text-red-400 hover:text-red-300 font-semibold underline decoration-neutral-800">Maniora (www.maniora.in)</a>
+                <span class="text-[11px] text-slate-500 block mb-1">FOUNDED COMPANY</span>
+                <a href="https://www.maniora.in/" target="_blank" rel="noopener" class="text-red-600 hover:text-red-700 font-semibold underline underline-offset-2">Maniora (www.maniora.in)</a>
               </div>
             </div>
 
-            <div class="pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs font-mono">
-              <span class="text-neutral-400">STATUS</span>
-              <span class="text-emerald-400 font-semibold flex items-center gap-1.5">
+            <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono">
+              <span class="text-slate-500">STATUS</span>
+              <span class="text-emerald-600 font-semibold flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
                 OPEN TO WORK
               </span>
@@ -418,70 +418,70 @@
   <!-- ========================================================================= -->
   <!-- 5. EXPERIENCE SECTION                                                     -->
   <!-- ========================================================================= -->
-  <section id="experience" class="py-20 sm:py-24 border-t border-neutral-900 bg-neutral-950/40">
+  <section id="experience" class="py-20 sm:py-24 border-t border-slate-200 bg-slate-50/70">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <!-- Section Header -->
       <div class="max-w-2xl mb-12 sm:mb-16 reveal-on-scroll">
-        <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest mb-2">
+        <p class="font-mono text-xs text-red-600 font-semibold uppercase tracking-widest mb-2">
           WORK HISTORY
         </p>
-        <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
           EXPERIENCE
         </h2>
-        <p class="mt-2.5 sm:mt-3 text-neutral-400 text-xs sm:text-base">
+        <p class="mt-2.5 sm:mt-3 text-slate-600 text-xs sm:text-base">
           My development experience building real-world web products and client platforms.
         </p>
       </div>
 
       <!-- Vertical Structured Editorial Timeline -->
-      <div class="space-y-8 sm:space-y-12 relative before:absolute before:left-3 sm:before:left-8 before:top-2 before:bottom-2 before:w-px before:bg-neutral-800">
+      <div class="space-y-8 sm:space-y-12 relative before:absolute before:left-3 sm:before:left-8 before:top-2 before:bottom-2 before:w-px before:bg-slate-300">
         
         <!-- EXPERIENCE 01 -->
         <div class="relative pl-8 sm:pl-20 reveal-on-scroll">
-          <div class="absolute left-1.5 sm:left-6 top-2 -translate-x-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-neutral-950 border-2 border-red-500"></div>
+          <div class="absolute left-1.5 sm:left-6 top-2 -translate-x-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-white border-2 border-red-600"></div>
 
-          <div class="surface-card rounded-xl p-5 sm:p-8 space-y-4">
+          <div class="surface-card rounded-xl p-5 sm:p-8 space-y-4 bg-white border border-slate-200 shadow-sm">
             
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-800 pb-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-4">
               <div>
-                <span class="font-mono text-xs text-red-400 font-bold tracking-widest">JUL 2025 — PRESENT</span>
-                <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">MANIORA</h3>
-                <p class="text-xs sm:text-sm text-neutral-300 font-mono">Founder & Full Stack Developer</p>
+                <span class="font-mono text-xs text-red-600 font-bold tracking-widest">JUL 2025 — PRESENT</span>
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">MANIORA</h3>
+                <p class="text-xs sm:text-sm text-slate-700 font-mono">Founder & Full Stack Developer</p>
               </div>
-              <div class="text-left sm:text-right font-mono text-xs text-neutral-400">
+              <div class="text-left sm:text-right font-mono text-xs text-slate-500">
                 <p>Jul 2025 — Present</p>
-                <p class="text-neutral-500">Hyderabad, Telangana</p>
+                <p class="text-slate-400">Hyderabad, Telangana</p>
               </div>
             </div>
 
-            <p class="text-neutral-300 text-xs sm:text-base leading-relaxed">
+            <p class="text-slate-700 text-xs sm:text-base leading-relaxed">
               "Building and deploying full-stack applications, SaaS products and business platforms from requirements and architecture through development, testing and production deployment."
             </p>
 
             <!-- Tech Stack Tags -->
             <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-1 sm:pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">React.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Node.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Express.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MongoDB</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MySQL</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">REST APIs</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Authentication</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Third-party APIs</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Linux / VPS</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">React.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Node.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Express.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">MongoDB</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">MySQL</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">REST APIs</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Authentication</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Third-party APIs</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Linux / VPS</span>
             </div>
 
             <!-- Key Responsibilities list -->
-            <div class="pt-3 sm:pt-4 border-t border-neutral-850">
-              <p class="text-xs font-mono text-neutral-400 mb-2 uppercase tracking-wider">WHAT I HANDLED:</p>
-              <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-neutral-400 font-sans">
-                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> Full-stack web application development</li>
-                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> SaaS product architecture & backend APIs</li>
-                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> REST API design & middleware development</li>
-                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> Database schema design & optimization</li>
-                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> Razorpay payment gateway integrations</li>
-                <li class="flex items-center gap-2"><span class="text-red-500">▸</span> Server setup, VPS deployment & debugging</li>
+            <div class="pt-3 sm:pt-4 border-t border-slate-200">
+              <p class="text-xs font-mono text-slate-500 mb-2 uppercase tracking-wider">WHAT I HANDLED:</p>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-slate-600 font-sans">
+                <li class="flex items-center gap-2"><span class="text-red-600">▸</span> Full-stack web application development</li>
+                <li class="flex items-center gap-2"><span class="text-red-600">▸</span> SaaS product architecture & backend APIs</li>
+                <li class="flex items-center gap-2"><span class="text-red-600">▸</span> REST API design & middleware development</li>
+                <li class="flex items-center gap-2"><span class="text-red-600">▸</span> Database schema design & optimization</li>
+                <li class="flex items-center gap-2"><span class="text-red-600">▸</span> Razorpay payment gateway integrations</li>
+                <li class="flex items-center gap-2"><span class="text-red-600">▸</span> Server setup, VPS deployment & debugging</li>
               </ul>
             </div>
 
@@ -490,33 +490,33 @@
 
         <!-- EXPERIENCE 02 -->
         <div class="relative pl-8 sm:pl-20 reveal-on-scroll delay-100">
-          <div class="absolute left-1.5 sm:left-6 top-2 -translate-x-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-neutral-950 border-2 border-neutral-600"></div>
+          <div class="absolute left-1.5 sm:left-6 top-2 -translate-x-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-white border-2 border-slate-400"></div>
 
-          <div class="surface-card rounded-xl p-5 sm:p-8 space-y-4">
+          <div class="surface-card rounded-xl p-5 sm:p-8 space-y-4 bg-white border border-slate-200 shadow-sm">
             
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-800 pb-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-4">
               <div>
-                <span class="font-mono text-xs text-neutral-400 font-bold tracking-widest">APR 2025 — JUN 2025</span>
-                <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">BUILD YOUR VISION</h3>
-                <p class="text-xs sm:text-sm text-neutral-300 font-mono">MERN Full Stack Developer</p>
+                <span class="font-mono text-xs text-slate-500 font-bold tracking-widest">APR 2025 — JUN 2025</span>
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">BUILD YOUR VISION</h3>
+                <p class="text-xs sm:text-sm text-slate-700 font-mono">MERN Full Stack Developer</p>
               </div>
-              <div class="text-left sm:text-right font-mono text-xs text-neutral-400">
+              <div class="text-left sm:text-right font-mono text-xs text-slate-500">
                 <p>Apr 2025 — Jun 2025</p>
-                <p class="text-neutral-500">Hyderabad</p>
+                <p class="text-slate-400">Hyderabad</p>
               </div>
             </div>
 
-            <p class="text-neutral-300 text-xs sm:text-base leading-relaxed">
+            <p class="text-slate-700 text-xs sm:text-base leading-relaxed">
               "Worked on full-stack web applications using the MERN stack, developing React interfaces, Node.js/Express APIs, database workflows and application integrations."
             </p>
 
             <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-1 sm:pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">JavaScript</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">React.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Node.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Express.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MongoDB</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MySQL</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">JavaScript</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">React.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Node.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Express.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">MongoDB</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">MySQL</span>
             </div>
 
           </div>
@@ -524,22 +524,22 @@
 
         <!-- EXPERIENCE 03 -->
         <div class="relative pl-8 sm:pl-20 reveal-on-scroll delay-200">
-          <div class="absolute left-1.5 sm:left-6 top-2 -translate-x-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-neutral-950 border-2 border-neutral-700"></div>
+          <div class="absolute left-1.5 sm:left-6 top-2 -translate-x-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-white border-2 border-slate-300"></div>
 
-          <div class="surface-card rounded-xl p-5 sm:p-8 space-y-4">
+          <div class="surface-card rounded-xl p-5 sm:p-8 space-y-4 bg-white border border-slate-200 shadow-sm">
             
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-800 pb-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-4">
               <div>
-                <span class="font-mono text-xs text-neutral-500 font-bold tracking-widest">MAR 2024</span>
-                <h3 class="text-lg sm:text-xl font-bold text-white mt-1">SANDBLAZE DIGITALS</h3>
-                <p class="text-xs sm:text-sm text-neutral-300 font-mono">Full Stack Developer</p>
+                <span class="font-mono text-xs text-slate-500 font-bold tracking-widest">MAR 2024</span>
+                <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1">SANDBLAZE DIGITALS</h3>
+                <p class="text-xs sm:text-sm text-slate-700 font-mono">Full Stack Developer</p>
               </div>
-              <div class="text-left sm:text-right font-mono text-xs text-neutral-400">
+              <div class="text-left sm:text-right font-mono text-xs text-slate-500">
                 <p>Mar 2024</p>
               </div>
             </div>
 
-            <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed">
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
               "Contributed to frontend and backend web application development, database integration, feature implementation, debugging and testing."
             </p>
 
@@ -560,13 +560,13 @@
       
       <!-- Section Header -->
       <div class="max-w-3xl mb-14 sm:mb-20 reveal-on-scroll">
-        <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest mb-2">
+        <p class="font-mono text-xs text-red-600 font-semibold uppercase tracking-widest mb-2">
           FEATURED PROJECTS
         </p>
-        <h2 class="text-2xl sm:text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-          SELECTED WORK<span class="text-red-500">.</span>
+        <h2 class="text-2xl sm:text-4xl md:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
+          SELECTED WORK<span class="text-red-600">.</span>
         </h2>
-        <p class="mt-3 sm:mt-4 text-neutral-400 text-xs sm:text-base md:text-lg">
+        <p class="mt-3 sm:mt-4 text-slate-600 text-xs sm:text-base md:text-lg">
           Real products, business applications and digital experiences I've built.
         </p>
       </div>
@@ -575,38 +575,38 @@
       <div class="space-y-12 sm:space-y-16">
         
         <!-- PROJECT 01: MANIORA STUDIO -->
-        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll">
+        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll bg-white border border-slate-200">
           
           <!-- Visual Product Card Mockup -->
-          <div class="lg:col-span-7 bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 p-6 sm:p-10 lg:p-12 relative min-h-[260px] sm:min-h-[340px] flex items-center justify-center border-b lg:border-b-0 lg:border-r border-neutral-800">
-            <div class="w-full max-w-lg rounded-xl border border-neutral-800 bg-neutral-950 shadow-2xl overflow-hidden">
-              <div class="h-8 bg-neutral-900 border-b border-neutral-800 px-3 flex items-center gap-1.5">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
-                <span class="ml-2 font-mono text-[10px] text-neutral-500">maniora-studio-app</span>
+          <div class="lg:col-span-7 bg-gradient-to-br from-slate-100 via-slate-50 to-slate-100 p-6 sm:p-10 lg:p-12 relative min-h-[260px] sm:min-h-[340px] flex items-center justify-center border-b lg:border-b-0 lg:border-r border-slate-200">
+            <div class="w-full max-w-lg rounded-xl border border-slate-200 bg-white shadow-xl overflow-hidden">
+              <div class="h-8 bg-slate-100 border-b border-slate-200 px-3 flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                <span class="ml-2 font-mono text-[10px] text-slate-500">maniora-studio-app</span>
               </div>
               <div class="p-6 space-y-4">
-                <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
-                  <span class="font-mono text-xs font-bold text-white">MANIORA STUDIO</span>
-                  <span class="px-2 py-0.5 text-[10px] font-mono bg-red-500/20 text-red-400 rounded">B2B2C SAAS</span>
+                <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+                  <span class="font-mono text-xs font-bold text-slate-900">MANIORA STUDIO</span>
+                  <span class="px-2 py-0.5 text-[10px] font-mono bg-red-100 text-red-700 font-semibold rounded">B2B2C SAAS</span>
                 </div>
                 <div class="grid grid-cols-2 gap-3 text-left font-mono text-[11px]">
-                  <div class="p-3 rounded bg-neutral-900 border border-neutral-800">
-                    <span class="text-neutral-500 block text-[9px]">MODULE 01</span>
-                    <span class="text-neutral-200 font-semibold">Live Galleries</span>
+                  <div class="p-3 rounded bg-slate-50 border border-slate-200">
+                    <span class="text-slate-400 block text-[9px]">MODULE 01</span>
+                    <span class="text-slate-800 font-semibold">Live Galleries</span>
                   </div>
-                  <div class="p-3 rounded bg-neutral-900 border border-neutral-800">
-                    <span class="text-neutral-500 block text-[9px]">MODULE 02</span>
-                    <span class="text-neutral-200 font-semibold">Contracts & Signing</span>
+                  <div class="p-3 rounded bg-slate-50 border border-slate-200">
+                    <span class="text-slate-400 block text-[9px]">MODULE 02</span>
+                    <span class="text-slate-800 font-semibold">Contracts & Signing</span>
                   </div>
-                  <div class="p-3 rounded bg-neutral-900 border border-neutral-800">
-                    <span class="text-neutral-500 block text-[9px]">MODULE 03</span>
-                    <span class="text-neutral-200 font-semibold">Razorpay Invoicing</span>
+                  <div class="p-3 rounded bg-slate-50 border border-slate-200">
+                    <span class="text-slate-400 block text-[9px]">MODULE 03</span>
+                    <span class="text-slate-800 font-semibold">Razorpay Invoicing</span>
                   </div>
-                  <div class="p-3 rounded bg-neutral-900 border border-neutral-800">
-                    <span class="text-neutral-500 block text-[9px]">MODULE 04</span>
-                    <span class="text-neutral-200 font-semibold">Multi-Tenant RBAC</span>
+                  <div class="p-3 rounded bg-slate-50 border border-slate-200">
+                    <span class="text-slate-400 block text-[9px]">MODULE 04</span>
+                    <span class="text-slate-800 font-semibold">Multi-Tenant RBAC</span>
                   </div>
                 </div>
               </div>
@@ -615,23 +615,23 @@
 
           <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 space-y-5 sm:space-y-6">
             <div class="flex items-center justify-between">
-              <span class="font-mono text-3xl sm:text-4xl font-bold text-neutral-700">01</span>
-              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-red-500/10 text-red-400 border border-red-500/20 rounded">B2B2C SAAS PLATFORM</span>
+              <span class="font-mono text-3xl sm:text-4xl font-bold text-slate-300">01</span>
+              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-red-100 text-red-700 font-semibold border border-red-200 rounded">B2B2C SAAS PLATFORM</span>
             </div>
 
             <div>
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white accent-line-grow inline-block">MANIORA STUDIO</h3>
-              <p class="mt-2.5 sm:mt-3 text-neutral-300 text-xs sm:text-sm lg:text-base leading-relaxed">
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 accent-line-grow inline-block">MANIORA STUDIO</h3>
+              <p class="mt-2.5 sm:mt-3 text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed">
                 Full-stack SaaS ecosystem for photography studios, providing studio accounts, digital/live galleries, client-facing experiences, contract management, automated invoicing and multi-tenant workflows.
               </p>
             </div>
 
             <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1 sm:pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">React.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Node.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Express.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MongoDB</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Razorpay API</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">React.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Node.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Express.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">MongoDB</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Razorpay API</span>
             </div>
 
             <div class="pt-3 sm:pt-4">
@@ -644,34 +644,34 @@
         </div>
 
         <!-- PROJECT 02: MANIORA DM AUTOMATION -->
-        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll">
+        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll bg-white border border-slate-200">
           
           <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 space-y-5 sm:space-y-6 order-2 lg:order-1">
             <div class="flex items-center justify-between">
-              <span class="font-mono text-3xl sm:text-4xl font-bold text-neutral-700">02</span>
-              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-neutral-800 text-neutral-300 border border-neutral-700 rounded">INSTAGRAM SAAS</span>
+              <span class="font-mono text-3xl sm:text-4xl font-bold text-slate-300">02</span>
+              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">INSTAGRAM SAAS</span>
             </div>
 
             <div>
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white accent-line-grow inline-block">MANIORA DM AUTOMATION</h3>
-              <p class="mt-2.5 sm:mt-3 text-neutral-300 text-xs sm:text-sm lg:text-base leading-relaxed">
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 accent-line-grow inline-block">MANIORA DM AUTOMATION</h3>
+              <p class="mt-2.5 sm:mt-3 text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed">
                 Instagram automation platform integrating Meta/Instagram APIs for account messaging and automation workflows.
               </p>
             </div>
 
             <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1 sm:pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Node.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Express.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Meta Graph API</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MongoDB</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Webhooks</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Node.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Express.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Meta Graph API</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">MongoDB</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Webhooks</span>
             </div>
 
             <div class="pt-3 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <button onclick="openProjectModal('maniora-dm-automation')" class="btn-secondary text-xs">
                 <span>VIEW DETAILS</span>
               </button>
-              <a href="https://chat.maniora.in/" target="_blank" rel="noopener" class="text-xs font-mono text-red-400 hover:text-red-300 font-bold flex items-center justify-center gap-1 min-h-[44px]">
+              <a href="https://chat.maniora.in/" target="_blank" rel="noopener" class="text-xs font-mono text-red-600 hover:text-red-700 font-bold flex items-center justify-center gap-1 min-h-[44px]">
                 <span>LIVE PROJECT</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </a>
@@ -679,21 +679,21 @@
           </div>
 
           <!-- Visual Product Card Mockup -->
-          <div class="lg:col-span-7 bg-gradient-to-bl from-neutral-900 via-neutral-950 to-neutral-900 p-6 sm:p-10 lg:p-12 relative min-h-[260px] sm:min-h-[340px] flex items-center justify-center border-b lg:border-b-0 lg:border-l border-neutral-800 order-1 lg:order-2">
-            <div class="w-full max-w-lg rounded-xl border border-neutral-800 bg-neutral-950 shadow-2xl overflow-hidden">
-              <div class="h-8 bg-neutral-900 border-b border-neutral-800 px-3 flex items-center justify-between">
-                <span class="font-mono text-[10px] text-red-400 font-bold">https://chat.maniora.in</span>
-                <span class="font-mono text-[9px] text-neutral-500">META API ENGINE</span>
+          <div class="lg:col-span-7 bg-gradient-to-bl from-slate-100 via-slate-50 to-slate-100 p-6 sm:p-10 lg:p-12 relative min-h-[260px] sm:min-h-[340px] flex items-center justify-center border-b lg:border-b-0 lg:border-l border-slate-200 order-1 lg:order-2">
+            <div class="w-full max-w-lg rounded-xl border border-slate-200 bg-white shadow-xl overflow-hidden">
+              <div class="h-8 bg-slate-100 border-b border-slate-200 px-3 flex items-center justify-between">
+                <span class="font-mono text-[10px] text-red-600 font-bold">https://chat.maniora.in</span>
+                <span class="font-mono text-[9px] text-slate-500">META API ENGINE</span>
               </div>
               <div class="p-6 space-y-3 font-mono text-xs">
-                <div class="flex items-center gap-2 text-emerald-400 text-[11px]">
+                <div class="flex items-center gap-2 text-emerald-600 text-[11px] font-semibold">
                   <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
                   <span>Webhook Listener Active</span>
                 </div>
-                <div class="p-3 bg-neutral-900 rounded border border-neutral-800 text-[11px] text-neutral-300 space-y-1">
-                  <span class="text-neutral-500 block text-[9px]">TRIGGER DETECTED</span>
+                <div class="p-3 bg-slate-50 rounded border border-slate-200 text-[11px] text-slate-700 space-y-1">
+                  <span class="text-slate-400 block text-[9px]">TRIGGER DETECTED</span>
                   <p>"Send preset info"</p>
-                  <span class="text-red-400 block text-[9px] pt-1">AUTOMATED DM DISPATCHED → CLIENT</span>
+                  <span class="text-red-600 block text-[9px] pt-1 font-bold">AUTOMATED DM DISPATCHED → CLIENT</span>
                 </div>
               </div>
             </div>
@@ -702,21 +702,21 @@
         </div>
 
         <!-- PROJECT 03: PIXELFABLE18 -->
-        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll">
+        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll bg-white border border-slate-200">
           
           <!-- Visual Product Card Mockup -->
-          <div class="lg:col-span-7 bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 p-6 sm:p-10 lg:p-12 relative min-h-[260px] sm:min-h-[340px] flex items-center justify-center border-b lg:border-b-0 lg:border-r border-neutral-800">
-            <div class="w-full max-w-lg rounded-xl border border-neutral-800 bg-neutral-950 shadow-2xl overflow-hidden">
-              <div class="h-8 bg-neutral-900 border-b border-neutral-800 px-3 flex items-center justify-between">
-                <span class="font-mono text-[10px] text-amber-400 font-bold">https://pixelfable18.in</span>
-                <span class="font-mono text-[9px] text-neutral-500">E-COMMERCE STORE</span>
+          <div class="lg:col-span-7 bg-gradient-to-br from-slate-100 via-slate-50 to-slate-100 p-6 sm:p-10 lg:p-12 relative min-h-[260px] sm:min-h-[340px] flex items-center justify-center border-b lg:border-b-0 lg:border-r border-slate-200">
+            <div class="w-full max-w-lg rounded-xl border border-slate-200 bg-white shadow-xl overflow-hidden">
+              <div class="h-8 bg-slate-100 border-b border-slate-200 px-3 flex items-center justify-between">
+                <span class="font-mono text-[10px] text-amber-600 font-bold">https://pixelfable18.in</span>
+                <span class="font-mono text-[9px] text-slate-500">E-COMMERCE STORE</span>
               </div>
               <div class="p-6 space-y-3 font-mono text-xs">
-                <div class="flex items-center justify-between border-b border-neutral-800 pb-2">
-                  <span class="text-white font-bold">DIGITAL PRESET PACK</span>
-                  <span class="text-amber-400">RAZORPAY GATEWAY</span>
+                <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+                  <span class="text-slate-900 font-bold">DIGITAL PRESET PACK</span>
+                  <span class="text-amber-600 font-semibold">RAZORPAY GATEWAY</span>
                 </div>
-                <div class="p-3 bg-neutral-900 rounded border border-neutral-800 text-[11px] text-neutral-300">
+                <div class="p-3 bg-slate-50 rounded border border-slate-200 text-[11px] text-slate-700 font-medium">
                   <span>✓ Instant SMTP Automated Download Delivery</span>
                 </div>
               </div>
@@ -725,30 +725,30 @@
 
           <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 space-y-5 sm:space-y-6">
             <div class="flex items-center justify-between">
-              <span class="font-mono text-3xl sm:text-4xl font-bold text-neutral-700">03</span>
-              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-neutral-800 text-neutral-300 border border-neutral-700 rounded">E-COMMERCE PLATFORM</span>
+              <span class="font-mono text-3xl sm:text-4xl font-bold text-slate-300">03</span>
+              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">E-COMMERCE PLATFORM</span>
             </div>
 
             <div>
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white accent-line-grow inline-block">PIXELFABLE18</h3>
-              <p class="mt-2.5 sm:mt-3 text-neutral-300 text-xs sm:text-sm lg:text-base leading-relaxed">
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 accent-line-grow inline-block">PIXELFABLE18</h3>
+              <p class="mt-2.5 sm:mt-3 text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed">
                 Digital products e-commerce platform with product management, admin functionality, secure checkout, payment integration and instant digital delivery.
               </p>
             </div>
 
             <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1 sm:pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">React.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Node.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Express.js</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MongoDB</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">Razorpay</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">React.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Node.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Express.js</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">MongoDB</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">Razorpay</span>
             </div>
 
             <div class="pt-3 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <button onclick="openProjectModal('pixelfable18')" class="btn-secondary text-xs">
                 <span>VIEW DETAILS</span>
               </button>
-              <a href="https://pixelfable18.in/" target="_blank" rel="noopener" class="text-xs font-mono text-red-400 hover:text-red-300 font-bold flex items-center justify-center gap-1 min-h-[44px]">
+              <a href="https://pixelfable18.in/" target="_blank" rel="noopener" class="text-xs font-mono text-red-600 hover:text-red-700 font-bold flex items-center justify-center gap-1 min-h-[44px]">
                 <span>LIVE PROJECT</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </a>
@@ -758,33 +758,33 @@
         </div>
 
         <!-- PROJECT 04: NUMBER SORTING SYSTEM -->
-        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll">
+        <div class="surface-card rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center reveal-on-scroll bg-white border border-slate-200">
           
           <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 space-y-5 sm:space-y-6 order-2 lg:order-1">
             <div class="flex items-center justify-between">
-              <span class="font-mono text-3xl sm:text-4xl font-bold text-neutral-700">04</span>
-              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-neutral-800 text-neutral-300 border border-neutral-700 rounded">DATA PROCESSING</span>
+              <span class="font-mono text-3xl sm:text-4xl font-bold text-slate-300">04</span>
+              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">DATA PROCESSING</span>
             </div>
 
             <div>
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white accent-line-grow inline-block">NUMBER SORTING SYSTEM / SORTIFYYY</h3>
-              <p class="mt-2.5 sm:mt-3 text-neutral-300 text-xs sm:text-sm lg:text-base leading-relaxed">
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 accent-line-grow inline-block">NUMBER SORTING SYSTEM / SORTIFYYY</h3>
+              <p class="mt-2.5 sm:mt-3 text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed">
                 Business application for processing and classifying large mobile-number datasets using telecom prefix, operator and regional data.
               </p>
             </div>
 
             <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1 sm:pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">PHP</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">CodeIgniter</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">MySQL</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-neutral-900 text-neutral-300 border border-neutral-800 rounded">JavaScript</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">PHP</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">CodeIgniter</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">MySQL</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-slate-100 text-slate-700 border border-slate-200 rounded">JavaScript</span>
             </div>
 
             <div class="pt-3 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <button onclick="openProjectModal('sortifyyy')" class="btn-secondary text-xs">
                 <span>VIEW DETAILS</span>
               </button>
-              <a href="https://sortifyy.cloud/" target="_blank" rel="noopener" class="text-xs font-mono text-red-400 hover:text-red-300 font-bold flex items-center justify-center gap-1 min-h-[44px]">
+              <a href="https://sortifyy.cloud/" target="_blank" rel="noopener" class="text-xs font-mono text-red-600 hover:text-red-700 font-bold flex items-center justify-center gap-1 min-h-[44px]">
                 <span>LIVE PROJECT</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </a>
@@ -792,18 +792,18 @@
           </div>
 
           <!-- Visual Product Card Mockup -->
-          <div class="lg:col-span-7 bg-gradient-to-bl from-neutral-900 via-neutral-950 to-neutral-900 p-6 sm:p-10 lg:p-12 relative min-h-[260px] sm:min-h-[340px] flex items-center justify-center border-b lg:border-b-0 lg:border-l border-neutral-800 order-1 lg:order-2">
-            <div class="w-full max-w-lg rounded-xl border border-neutral-800 bg-neutral-950 shadow-2xl overflow-hidden">
-              <div class="h-8 bg-neutral-900 border-b border-neutral-800 px-3 flex items-center justify-between">
-                <span class="font-mono text-[10px] text-emerald-400 font-bold">https://sortifyy.cloud</span>
-                <span class="font-mono text-[9px] text-neutral-500">EXCEL DATA PARSER</span>
+          <div class="lg:col-span-7 bg-gradient-to-bl from-slate-100 via-slate-50 to-slate-100 p-6 sm:p-10 lg:p-12 relative min-h-[260px] sm:min-h-[340px] flex items-center justify-center border-b lg:border-b-0 lg:border-l border-slate-200 order-1 lg:order-2">
+            <div class="w-full max-w-lg rounded-xl border border-slate-200 bg-white shadow-xl overflow-hidden">
+              <div class="h-8 bg-slate-100 border-b border-slate-200 px-3 flex items-center justify-between">
+                <span class="font-mono text-[10px] text-emerald-600 font-bold">https://sortifyy.cloud</span>
+                <span class="font-mono text-[9px] text-slate-500">EXCEL DATA PARSER</span>
               </div>
               <div class="p-6 space-y-3 font-mono text-xs">
-                <div class="flex items-center justify-between border-b border-neutral-800 pb-2">
-                  <span class="text-white font-bold">50,000+ RECORDS PARSED</span>
-                  <span class="text-emerald-400">OPERATOR MATCHED</span>
+                <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+                  <span class="text-slate-900 font-bold">50,000+ RECORDS PARSED</span>
+                  <span class="text-emerald-600 font-semibold">OPERATOR MATCHED</span>
                 </div>
-                <div class="p-3 bg-neutral-900 rounded border border-neutral-800 text-[11px] text-neutral-300">
+                <div class="p-3 bg-slate-50 rounded border border-slate-200 text-[11px] text-slate-700">
                   <span>✓ Duplicate Removal & Clean CSV Export</span>
                 </div>
               </div>
@@ -816,14 +816,14 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           
           <!-- PROJECT 05: THE KAHANI CREW -->
-          <div class="surface-card rounded-2xl p-6 sm:p-8 space-y-5 sm:space-y-6 reveal-on-scroll">
-            <div class="flex items-center justify-between border-b border-neutral-800 pb-3 sm:pb-4">
-              <span class="font-mono text-xl sm:text-2xl font-bold text-neutral-600">05</span>
-              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-neutral-900 text-neutral-400 rounded">EVENT MANAGEMENT</span>
+          <div class="surface-card rounded-2xl p-6 sm:p-8 space-y-5 sm:space-y-6 reveal-on-scroll bg-white border border-slate-200">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-3 sm:pb-4">
+              <span class="font-mono text-xl sm:text-2xl font-bold text-slate-300">05</span>
+              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-slate-100 text-slate-700 rounded">EVENT MANAGEMENT</span>
             </div>
             <div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white accent-line-grow inline-block">THE KAHANI CREW</h3>
-              <p class="mt-2.5 sm:mt-3 text-neutral-300 text-xs sm:text-sm leading-relaxed">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 accent-line-grow inline-block">THE KAHANI CREW</h3>
+              <p class="mt-2.5 sm:mt-3 text-slate-600 text-xs sm:text-sm leading-relaxed">
                 Custom event management and photography website focused on visual presentation, responsive experience and performance.
               </p>
             </div>
@@ -831,21 +831,21 @@
               <button onclick="openProjectModal('kahani-crew')" class="btn-secondary text-xs">
                 <span>DETAILS</span>
               </button>
-              <a href="https://thekahanicrew.com/" target="_blank" rel="noopener" class="text-xs font-mono text-red-400 hover:text-red-300 font-bold flex items-center justify-center gap-1 min-h-[44px]">
+              <a href="https://thekahanicrew.com/" target="_blank" rel="noopener" class="text-xs font-mono text-red-600 hover:text-red-700 font-bold flex items-center justify-center gap-1 min-h-[44px]">
                 <span>VISIT WEBSITE →</span>
               </a>
             </div>
           </div>
 
           <!-- PROJECT 06: 4KMEDIA -->
-          <div class="surface-card rounded-2xl p-6 sm:p-8 space-y-5 sm:space-y-6 reveal-on-scroll delay-100">
-            <div class="flex items-center justify-between border-b border-neutral-800 pb-3 sm:pb-4">
-              <span class="font-mono text-xl sm:text-2xl font-bold text-neutral-600">06</span>
-              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-neutral-900 text-neutral-400 rounded">AGENCY WEBSITE</span>
+          <div class="surface-card rounded-2xl p-6 sm:p-8 space-y-5 sm:space-y-6 reveal-on-scroll delay-100 bg-white border border-slate-200">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-3 sm:pb-4">
+              <span class="font-mono text-xl sm:text-2xl font-bold text-slate-300">06</span>
+              <span class="px-2.5 py-1 text-[11px] sm:text-xs font-mono bg-slate-100 text-slate-700 rounded">AGENCY WEBSITE</span>
             </div>
             <div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white accent-line-grow inline-block">4KMEDIA</h3>
-              <p class="mt-2.5 sm:mt-3 text-neutral-300 text-xs sm:text-sm leading-relaxed">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 accent-line-grow inline-block">4KMEDIA</h3>
+              <p class="mt-2.5 sm:mt-3 text-slate-600 text-xs sm:text-sm leading-relaxed">
                 High-performance business website with custom visual design, responsive layouts and interactive experiences.
               </p>
             </div>
@@ -853,7 +853,7 @@
               <button onclick="openProjectModal('4kmedia')" class="btn-secondary text-xs">
                 <span>DETAILS</span>
               </button>
-              <a href="https://4kmedia.in/" target="_blank" rel="noopener" class="text-xs font-mono text-red-400 hover:text-red-300 font-bold flex items-center justify-center gap-1 min-h-[44px]">
+              <a href="https://4kmedia.in/" target="_blank" rel="noopener" class="text-xs font-mono text-red-600 hover:text-red-700 font-bold flex items-center justify-center gap-1 min-h-[44px]">
                 <span>VISIT WEBSITE →</span>
               </a>
             </div>
@@ -870,17 +870,17 @@
   <!-- ========================================================================= -->
   <!-- 7. ENGINEERING APPROACH ("HOW I BUILD")                                   -->
   <!-- ========================================================================= -->
-  <section id="approach" class="py-20 sm:py-24 border-t border-neutral-900 bg-neutral-950/60">
+  <section id="approach" class="py-20 sm:py-24 border-t border-slate-200 bg-slate-50/70">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <div class="max-w-2xl mb-12 sm:mb-16 reveal-on-scroll">
-        <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest mb-2">
+        <p class="font-mono text-xs text-red-600 font-semibold uppercase tracking-widest mb-2">
           MY DEVELOPMENT PROCESS
         </p>
-        <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
-          HOW I BUILD<span class="text-red-500">.</span>
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+          HOW I BUILD<span class="text-red-600">.</span>
         </h2>
-        <p class="mt-2.5 sm:mt-3 text-neutral-400 text-xs sm:text-base">
+        <p class="mt-2.5 sm:mt-3 text-slate-600 text-xs sm:text-base">
           A practical 4-step workflow I follow to ship software reliably.
         </p>
       </div>
@@ -888,49 +888,49 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
         
         <!-- STEP 01 -->
-        <div class="surface-card rounded-xl p-5 sm:p-6 space-y-3.5 sm:space-y-4 reveal-on-scroll">
-          <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
-            <span class="font-mono text-xl sm:text-2xl font-bold text-red-400">01</span>
-            <span class="font-mono text-[10px] uppercase text-neutral-500">STEP ONE</span>
+        <div class="surface-card rounded-xl p-5 sm:p-6 space-y-3.5 sm:space-y-4 reveal-on-scroll bg-white border border-slate-200">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <span class="font-mono text-xl sm:text-2xl font-bold text-red-600">01</span>
+            <span class="font-mono text-[10px] uppercase text-slate-400">STEP ONE</span>
           </div>
-          <h3 class="text-base sm:text-lg font-bold text-white font-mono">UNDERSTAND</h3>
-          <p class="text-xs text-neutral-300 leading-relaxed">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 font-mono">UNDERSTAND</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
             Talking through project goals, user flows, and core requirements before jumping into code.
           </p>
         </div>
 
         <!-- STEP 02 -->
-        <div class="surface-card rounded-xl p-5 sm:p-6 space-y-3.5 sm:space-y-4 reveal-on-scroll delay-100">
-          <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
-            <span class="font-mono text-xl sm:text-2xl font-bold text-red-400">02</span>
-            <span class="font-mono text-[10px] uppercase text-neutral-500">STEP TWO</span>
+        <div class="surface-card rounded-xl p-5 sm:p-6 space-y-3.5 sm:space-y-4 reveal-on-scroll delay-100 bg-white border border-slate-200">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <span class="font-mono text-xl sm:text-2xl font-bold text-red-600">02</span>
+            <span class="font-mono text-[10px] uppercase text-slate-400">STEP TWO</span>
           </div>
-          <h3 class="text-base sm:text-lg font-bold text-white font-mono">ARCHITECT</h3>
-          <p class="text-xs text-neutral-300 leading-relaxed">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 font-mono">ARCHITECT</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
             Planning the application structure, database schemas (MongoDB / MySQL), and API endpoints.
           </p>
         </div>
 
         <!-- STEP 03 -->
-        <div class="surface-card rounded-xl p-5 sm:p-6 space-y-3.5 sm:space-y-4 reveal-on-scroll delay-200">
-          <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
-            <span class="font-mono text-xl sm:text-2xl font-bold text-red-400">03</span>
-            <span class="font-mono text-[10px] uppercase text-neutral-500">STEP THREE</span>
+        <div class="surface-card rounded-xl p-5 sm:p-6 space-y-3.5 sm:space-y-4 reveal-on-scroll delay-200 bg-white border border-slate-200">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <span class="font-mono text-xl sm:text-2xl font-bold text-red-600">03</span>
+            <span class="font-mono text-[10px] uppercase text-slate-400">STEP THREE</span>
           </div>
-          <h3 class="text-base sm:text-lg font-bold text-white font-mono">BUILD</h3>
-          <p class="text-xs text-neutral-300 leading-relaxed">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 font-mono">BUILD</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
             Coding the frontend interfaces, writing backend APIs, integrating payment gateways, and testing logic.
           </p>
         </div>
 
         <!-- STEP 04 -->
-        <div class="surface-card rounded-xl p-5 sm:p-6 space-y-3.5 sm:space-y-4 reveal-on-scroll delay-300">
-          <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
-            <span class="font-mono text-xl sm:text-2xl font-bold text-red-400">04</span>
-            <span class="font-mono text-[10px] uppercase text-neutral-500">STEP FOUR</span>
+        <div class="surface-card rounded-xl p-5 sm:p-6 space-y-3.5 sm:space-y-4 reveal-on-scroll delay-300 bg-white border border-slate-200">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <span class="font-mono text-xl sm:text-2xl font-bold text-red-600">04</span>
+            <span class="font-mono text-[10px] uppercase text-slate-400">STEP FOUR</span>
           </div>
-          <h3 class="text-base sm:text-lg font-bold text-white font-mono">SHIP</h3>
-          <p class="text-xs text-neutral-300 leading-relaxed">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 font-mono">SHIP</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
             Setting up server hosting, SSL certificates, domain configuration, and post-launch support.
           </p>
         </div>
@@ -944,37 +944,37 @@
   <!-- ========================================================================= -->
   <!-- 8. AI-ASSISTED DEVELOPMENT                                               -->
   <!-- ========================================================================= -->
-  <section id="ai-assisted" class="py-16 sm:py-20 border-t border-neutral-900">
+  <section id="ai-assisted" class="py-16 sm:py-20 border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
-      <div class="surface-card rounded-2xl p-6 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center reveal-on-scroll">
+      <div class="surface-card rounded-2xl p-6 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center reveal-on-scroll bg-white border border-slate-200 shadow-sm">
         
         <div class="lg:col-span-8 space-y-3 sm:space-y-4">
-          <p class="font-mono text-xs text-neutral-400 font-semibold uppercase tracking-widest">
+          <p class="font-mono text-xs text-slate-500 font-semibold uppercase tracking-widest">
             MODERN TOOLING
           </p>
-          <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
+          <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
             AI-ASSISTED DEVELOPMENT
           </h2>
-          <p class="text-neutral-300 text-xs sm:text-sm lg:text-base leading-relaxed max-w-3xl">
+          <p class="text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed max-w-3xl">
             "I use modern AI-assisted development tools alongside traditional engineering practices to accelerate implementation, debugging, refactoring, documentation and codebase exploration while maintaining control over architecture and production quality."
           </p>
         </div>
 
         <div class="lg:col-span-4 flex flex-wrap items-center justify-start lg:justify-end gap-2.5 sm:gap-3 font-mono text-xs">
-          <span class="px-3 py-1.5 sm:px-3.5 sm:py-2 bg-neutral-900 border border-neutral-800 text-neutral-300 rounded font-semibold flex items-center gap-2 text-xs">
+          <span class="px-3 py-1.5 sm:px-3.5 sm:py-2 bg-slate-100 border border-slate-200 text-slate-700 rounded font-semibold flex items-center gap-2 text-xs">
             <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
             Cursor
           </span>
-          <span class="px-3 py-1.5 sm:px-3.5 sm:py-2 bg-neutral-900 border border-neutral-800 text-neutral-300 rounded font-semibold flex items-center gap-2 text-xs">
+          <span class="px-3 py-1.5 sm:px-3.5 sm:py-2 bg-slate-100 border border-slate-200 text-slate-700 rounded font-semibold flex items-center gap-2 text-xs">
             <span class="w-2 h-2 rounded-full bg-amber-500"></span>
             Claude
           </span>
-          <span class="px-3 py-1.5 sm:px-3.5 sm:py-2 bg-neutral-900 border border-neutral-800 text-neutral-300 rounded font-semibold flex items-center gap-2 text-xs">
-            <span class="w-2 h-2 rounded-full bg-red-500"></span>
+          <span class="px-3 py-1.5 sm:px-3.5 sm:py-2 bg-slate-100 border border-slate-200 text-slate-700 rounded font-semibold flex items-center gap-2 text-xs">
+            <span class="w-2 h-2 rounded-full bg-red-600"></span>
             Antigravity
           </span>
-          <span class="px-3 py-1.5 sm:px-3.5 sm:py-2 bg-neutral-900 border border-neutral-800 text-neutral-300 rounded font-semibold flex items-center gap-2 text-xs">
+          <span class="px-3 py-1.5 sm:px-3.5 sm:py-2 bg-slate-100 border border-slate-200 text-slate-700 rounded font-semibold flex items-center gap-2 text-xs">
             <span class="w-2 h-2 rounded-full bg-blue-500"></span>
             ChatGPT
           </span>
@@ -989,17 +989,17 @@
   <!-- ========================================================================= -->
   <!-- 9. CLIENT WORK / TESTIMONIALS                                            -->
   <!-- ========================================================================= -->
-  <section id="testimonials" class="py-20 sm:py-24 border-t border-neutral-900 bg-neutral-950/40">
+  <section id="testimonials" class="py-20 sm:py-24 border-t border-slate-200 bg-slate-50/70">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <div class="max-w-2xl mb-12 sm:mb-16 reveal-on-scroll">
-        <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest mb-2">
+        <p class="font-mono text-xs text-red-600 font-semibold uppercase tracking-widest mb-2">
           CLIENT FEEDBACK
         </p>
-        <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
-          WHAT CLIENTS SAY<span class="text-red-500">.</span>
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+          WHAT CLIENTS SAY<span class="text-red-600">.</span>
         </h2>
-        <p class="mt-2.5 sm:mt-3 text-neutral-400 text-xs sm:text-base">
+        <p class="mt-2.5 sm:mt-3 text-slate-600 text-xs sm:text-base">
           Feedback from founders and clients I've worked with.
         </p>
       </div>
@@ -1007,44 +1007,44 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
         
         <!-- TESTIMONIAL 01 -->
-        <div class="surface-card rounded-xl p-6 sm:p-8 space-y-5 sm:space-y-6 flex flex-col justify-between reveal-on-scroll">
+        <div class="surface-card rounded-xl p-6 sm:p-8 space-y-5 sm:space-y-6 flex flex-col justify-between reveal-on-scroll bg-white border border-slate-200 shadow-sm">
           <div class="space-y-3 sm:space-y-4">
-            <div class="text-red-500 text-2xl font-serif">“</div>
-            <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed italic">
+            <div class="text-red-600 text-2xl font-serif">“</div>
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed italic">
               "Working with the MANIORA team was a great experience. The website looks premium, loads fast, and perfectly represents our brand. The custom gallery and smooth animations really make it stand out. Very happy with the final result!"
             </p>
           </div>
-          <div class="pt-3 sm:pt-4 border-t border-neutral-800 font-mono">
-            <p class="font-bold text-white text-xs sm:text-sm">Ujwal</p>
-            <p class="text-[11px] sm:text-xs text-neutral-500">Co-Founder — The Kahani Crew</p>
+          <div class="pt-3 sm:pt-4 border-t border-slate-200 font-mono">
+            <p class="font-bold text-slate-900 text-xs sm:text-sm">Ujwal</p>
+            <p class="text-[11px] sm:text-xs text-slate-500">Co-Founder — The Kahani Crew</p>
           </div>
         </div>
 
         <!-- TESTIMONIAL 02 -->
-        <div class="surface-card rounded-xl p-6 sm:p-8 space-y-5 sm:space-y-6 flex flex-col justify-between reveal-on-scroll delay-100">
+        <div class="surface-card rounded-xl p-6 sm:p-8 space-y-5 sm:space-y-6 flex flex-col justify-between reveal-on-scroll delay-100 bg-white border border-slate-200 shadow-sm">
           <div class="space-y-3 sm:space-y-4">
-            <div class="text-red-500 text-2xl font-serif">“</div>
-            <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed italic">
+            <div class="text-red-600 text-2xl font-serif">“</div>
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed italic">
               "Working with MANIORA was an amazing experience. They built us a preset-selling website with an admin panel that makes it super easy to manage orders and track presets. Our business finally has a professional online presence!"
             </p>
           </div>
-          <div class="pt-3 sm:pt-4 border-t border-neutral-800 font-mono">
-            <p class="font-bold text-white text-xs sm:text-sm">Akhil</p>
-            <p class="text-[11px] sm:text-xs text-neutral-500">Founder — Pixelfable18</p>
+          <div class="pt-3 sm:pt-4 border-t border-slate-200 font-mono">
+            <p class="font-bold text-slate-900 text-xs sm:text-sm">Akhil</p>
+            <p class="text-[11px] sm:text-xs text-slate-500">Founder — Pixelfable18</p>
           </div>
         </div>
 
         <!-- TESTIMONIAL 03 -->
-        <div class="surface-card rounded-xl p-6 sm:p-8 space-y-5 sm:space-y-6 flex flex-col justify-between reveal-on-scroll delay-200">
+        <div class="surface-card rounded-xl p-6 sm:p-8 space-y-5 sm:space-y-6 flex flex-col justify-between reveal-on-scroll delay-200 bg-white border border-slate-200 shadow-sm">
           <div class="space-y-3 sm:space-y-4">
-            <div class="text-red-500 text-2xl font-serif">“</div>
-            <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed italic">
+            <div class="text-red-600 text-2xl font-serif">“</div>
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed italic">
               "The MANIORA team nailed our website for 4KMedia. The output is clean, fast, and on-brand—but the real highlight is the animated illustrations. They bring the site to life and make our story pop. Super impressed!"
             </p>
           </div>
-          <div class="pt-3 sm:pt-4 border-t border-neutral-800 font-mono">
-            <p class="font-bold text-white text-xs sm:text-sm">Krishna Kanth</p>
-            <p class="text-[11px] sm:text-xs text-neutral-500">Founder — 4KMedia</p>
+          <div class="pt-3 sm:pt-4 border-t border-slate-200 font-mono">
+            <p class="font-bold text-slate-900 text-xs sm:text-sm">Krishna Kanth</p>
+            <p class="text-[11px] sm:text-xs text-slate-500">Founder — 4KMedia</p>
           </div>
         </div>
 
@@ -1057,18 +1057,18 @@
   <!-- ========================================================================= -->
   <!-- 10. RESUME CTA SECTION                                                    -->
   <!-- ========================================================================= -->
-  <section id="resume-cta" class="py-20 sm:py-24 border-t border-neutral-900 bg-gradient-to-b from-neutral-950 to-[#0c0d0e]">
+  <section id="resume-cta" class="py-20 sm:py-24 border-t border-slate-200 bg-gradient-to-b from-white to-slate-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6 sm:space-y-8 reveal-on-scroll">
       
-      <span class="inline-block px-3 py-1 bg-red-500/10 border border-red-500/20 text-red-400 font-mono text-[11px] sm:text-xs rounded-full uppercase tracking-wider">
+      <span class="inline-block px-3 py-1 bg-red-100 border border-red-200 text-red-700 font-mono text-[11px] sm:text-xs rounded-full uppercase tracking-wider font-semibold">
         CAREER OPPORTUNITIES
       </span>
 
-      <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
+      <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
         LOOKING FOR A DEVELOPER?
       </h2>
 
-      <p class="text-neutral-300 text-sm sm:text-lg md:text-xl max-w-2xl mx-auto">
+      <p class="text-slate-700 text-sm sm:text-lg md:text-xl max-w-2xl mx-auto">
         I'm currently open to Full Stack Developer, MERN Developer and Software Engineer opportunities.
       </p>
 
@@ -1080,7 +1080,7 @@
 
         <a href="https://www.linkedin.com/in/ravulamanohar" target="_blank" rel="noopener" class="btn-secondary">
           <span>VIEW LINKEDIN</span>
-          <svg class="w-4 h-4 text-neutral-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.64a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2Z"/></svg>
+          <svg class="w-4 h-4 text-slate-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.64a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2Z"/></svg>
         </a>
       </div>
 
@@ -1091,19 +1091,19 @@
   <!-- ========================================================================= -->
   <!-- 11. CONTACT SECTION                                                       -->
   <!-- ========================================================================= -->
-  <section id="contact" class="py-20 sm:py-28 border-t border-neutral-900 relative">
+  <section id="contact" class="py-20 sm:py-28 border-t border-slate-200 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
         <div class="lg:col-span-7 space-y-5 sm:space-y-6 reveal-on-scroll">
-          <p class="font-mono text-xs text-red-400 font-semibold uppercase tracking-widest">
+          <p class="font-mono text-xs text-red-600 font-semibold uppercase tracking-widest">
             GET IN TOUCH
           </p>
-          <h2 class="text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight">
-            LET'S TALK<span class="text-red-500">.</span>
+          <h2 class="text-3xl sm:text-5xl md:text-6xl font-bold text-slate-900 tracking-tight">
+            LET'S TALK<span class="text-red-600">.</span>
           </h2>
-          <p class="text-neutral-300 text-sm sm:text-lg md:text-xl max-w-xl">
+          <p class="text-slate-600 text-sm sm:text-lg md:text-xl max-w-xl">
             Have a product idea, project opportunity, or engineering role? Feel free to reach out.
           </p>
 
@@ -1115,37 +1115,37 @@
 
             <button class="copy-email-btn btn-secondary">
               <span>COPY EMAIL ADDRESS</span>
-              <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
             </button>
           </div>
         </div>
 
         <div class="lg:col-span-5 reveal-on-scroll delay-200">
-          <div class="surface-card rounded-xl p-5 sm:p-8 space-y-5 sm:space-y-6 font-mono text-xs sm:text-sm">
-            <div class="border-b border-neutral-800 pb-3 flex items-center justify-between">
-              <span class="text-xs text-neutral-500">DIRECT LINKS</span>
-              <span class="text-red-500 font-bold">● ONLINE</span>
+          <div class="surface-card rounded-xl p-5 sm:p-8 space-y-5 sm:space-y-6 font-mono text-xs sm:text-sm bg-white border border-slate-200 shadow-sm">
+            <div class="border-b border-slate-200 pb-3 flex items-center justify-between">
+              <span class="text-xs text-slate-500">DIRECT LINKS</span>
+              <span class="text-red-600 font-bold">● ONLINE</span>
             </div>
 
             <div class="space-y-4">
               <div>
-                <span class="text-[11px] text-neutral-500 block mb-1">EMAIL</span>
-                <a href="mailto:ravulamanohar8@gmail.com" class="text-white hover:text-red-400 transition-colors break-all">ravulamanohar8@gmail.com</a>
+                <span class="text-[11px] text-slate-500 block mb-1">EMAIL</span>
+                <a href="mailto:ravulamanohar8@gmail.com" class="text-slate-900 hover:text-red-600 transition-colors break-all">ravulamanohar8@gmail.com</a>
               </div>
 
               <div>
-                <span class="text-[11px] text-neutral-500 block mb-1">LINKEDIN</span>
-                <a href="https://www.linkedin.com/in/ravulamanohar" target="_blank" rel="noopener" class="text-white hover:text-red-400 transition-colors break-all">linkedin.com/in/ravulamanohar</a>
+                <span class="text-[11px] text-slate-500 block mb-1">LINKEDIN</span>
+                <a href="https://www.linkedin.com/in/ravulamanohar" target="_blank" rel="noopener" class="text-slate-900 hover:text-red-600 transition-colors break-all">linkedin.com/in/ravulamanohar</a>
               </div>
 
               <div>
-                <span class="text-[11px] text-neutral-500 block mb-1">GITHUB</span>
-                <a href="https://github.com/manoharyadavr" target="_blank" rel="noopener" class="text-white hover:text-red-400 transition-colors break-all">github.com/manoharyadavr</a>
+                <span class="text-[11px] text-slate-500 block mb-1">GITHUB</span>
+                <a href="https://github.com/manoharyadavr" target="_blank" rel="noopener" class="text-slate-900 hover:text-red-600 transition-colors break-all">github.com/manoharyadavr</a>
               </div>
 
               <div>
-                <span class="text-[11px] text-neutral-500 block mb-1">MANIORA</span>
-                <a href="https://www.maniora.in/" target="_blank" rel="noopener" class="text-red-400 hover:text-red-300 font-bold">www.maniora.in</a>
+                <span class="text-[11px] text-slate-500 block mb-1">MANIORA</span>
+                <a href="https://www.maniora.in/" target="_blank" rel="noopener" class="text-red-600 hover:text-red-700 font-bold">www.maniora.in</a>
               </div>
             </div>
           </div>
@@ -1160,20 +1160,20 @@
   <!-- ========================================================================= -->
   <!-- 12. FOOTER                                                                -->
   <!-- ========================================================================= -->
-  <footer class="py-10 sm:py-12 border-t border-neutral-900 bg-neutral-950 font-mono text-xs text-neutral-500">
+  <footer class="py-10 sm:py-12 border-t border-slate-200 bg-white font-mono text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-center sm:text-left">
       
       <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
-        <span class="font-bold text-white">RAVULA MANOHAR YADAV</span>
+        <span class="font-bold text-slate-900">RAVULA MANOHAR YADAV</span>
         <span class="hidden sm:inline">•</span>
         <span>Full Stack Developer • Founder @ Maniora</span>
       </div>
 
       <div class="flex items-center gap-4 sm:gap-6">
-        <a href="https://github.com/manoharyadavr" target="_blank" rel="noopener" class="hover:text-neutral-300 transition-colors">GitHub</a>
-        <a href="https://www.linkedin.com/in/ravulamanohar" target="_blank" rel="noopener" class="hover:text-neutral-300 transition-colors">LinkedIn</a>
-        <a href="https://www.maniora.in/" target="_blank" rel="noopener" class="hover:text-neutral-300 transition-colors">Maniora</a>
-        <a href="mailto:ravulamanohar8@gmail.com" class="hover:text-neutral-300 transition-colors">Email</a>
+        <a href="https://github.com/manoharyadavr" target="_blank" rel="noopener" class="hover:text-slate-900 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/ravulamanohar" target="_blank" rel="noopener" class="hover:text-slate-900 transition-colors">LinkedIn</a>
+        <a href="https://www.maniora.in/" target="_blank" rel="noopener" class="hover:text-slate-900 transition-colors">Maniora</a>
+        <a href="mailto:ravulamanohar8@gmail.com" class="hover:text-slate-900 transition-colors">Email</a>
       </div>
 
       <div>
@@ -1187,58 +1187,58 @@
   <!-- ========================================================================= -->
   <!-- PROJECT DETAIL MODAL OVERLAY                                              -->
   <!-- ========================================================================= -->
-  <div id="project-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-neutral-950/85 backdrop-blur-md" aria-hidden="true" role="dialog">
-    <div class="modal-card surface-card rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-5 sm:p-8 lg:p-10 relative space-y-5 sm:space-y-6">
+  <div id="project-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-900/60 backdrop-blur-md" aria-hidden="true" role="dialog">
+    <div class="modal-card surface-card rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-5 sm:p-8 lg:p-10 relative space-y-5 sm:space-y-6 bg-white border border-slate-200 shadow-2xl">
       
       <!-- Close Button -->
-      <button id="close-modal-btn" aria-label="Close modal" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-neutral-400 hover:text-white p-2 rounded-lg bg-neutral-900 border border-neutral-800 transition-colors">
+      <button id="close-modal-btn" aria-label="Close modal" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-slate-500 hover:text-slate-900 p-2 rounded-lg bg-slate-100 border border-slate-200 transition-colors">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
 
       <!-- Modal Header -->
-      <div class="border-b border-neutral-800 pb-5 pr-10 sm:pr-12 space-y-2">
+      <div class="border-b border-slate-200 pb-5 pr-10 sm:pr-12 space-y-2">
         <div class="flex items-center gap-3 font-mono text-xs">
-          <span id="modal-project-number" class="text-red-400 font-bold">01</span>
-          <span id="modal-project-category" class="px-2 py-0.5 bg-neutral-900 border border-neutral-800 text-neutral-300 rounded uppercase text-[10px] sm:text-xs">CATEGORY</span>
+          <span id="modal-project-number" class="text-red-600 font-bold">01</span>
+          <span id="modal-project-category" class="px-2 py-0.5 bg-slate-100 border border-slate-200 text-slate-700 rounded uppercase text-[10px] sm:text-xs">CATEGORY</span>
         </div>
-        <h2 id="modal-project-name" class="text-xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">PROJECT NAME</h2>
-        <p id="modal-project-tagline" class="text-neutral-400 text-xs sm:text-sm font-mono">Project short tagline here.</p>
+        <h2 id="modal-project-name" class="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">PROJECT NAME</h2>
+        <p id="modal-project-tagline" class="text-slate-600 text-xs sm:text-sm font-mono">Project short tagline here.</p>
       </div>
 
       <!-- Overview -->
       <div class="space-y-2">
-        <h4 class="font-mono text-xs text-neutral-500 uppercase tracking-widest">OVERVIEW</h4>
-        <p id="modal-project-overview" class="text-neutral-200 text-xs sm:text-sm lg:text-base leading-relaxed">
+        <h4 class="font-mono text-xs text-slate-500 uppercase tracking-widest">OVERVIEW</h4>
+        <p id="modal-project-overview" class="text-slate-700 text-xs sm:text-sm lg:text-base leading-relaxed">
           Detailed overview content.
         </p>
       </div>
 
       <!-- My Role -->
-      <div class="space-y-2 p-3.5 sm:p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80 font-mono text-xs">
-        <span class="text-neutral-500 uppercase tracking-widest block mb-1">MY ROLE & WORK</span>
-        <p id="modal-project-role" class="text-neutral-300 leading-relaxed text-[11px] sm:text-xs">
+      <div class="space-y-2 p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 font-mono text-xs">
+        <span class="text-slate-500 uppercase tracking-widest block mb-1">MY ROLE & WORK</span>
+        <p id="modal-project-role" class="text-slate-800 leading-relaxed text-[11px] sm:text-xs">
           Role details.
         </p>
       </div>
 
       <!-- Key Features -->
       <div class="space-y-3">
-        <h4 class="font-mono text-xs text-neutral-500 uppercase tracking-widest">KEY FEATURES & DELIVERABLES</h4>
+        <h4 class="font-mono text-xs text-slate-500 uppercase tracking-widest">KEY FEATURES & DELIVERABLES</h4>
         <ul id="modal-project-features" class="space-y-2 font-sans">
           <!-- Populated dynamically via JS -->
         </ul>
       </div>
 
       <!-- Tech Stack Tags -->
-      <div class="space-y-3 pt-2 border-t border-neutral-800">
-        <h4 class="font-mono text-xs text-neutral-500 uppercase tracking-widest">TECHNOLOGY STACK</h4>
+      <div class="space-y-3 pt-2 border-t border-slate-200">
+        <h4 class="font-mono text-xs text-slate-500 uppercase tracking-widest">TECHNOLOGY STACK</h4>
         <div id="modal-project-tech" class="flex flex-wrap gap-2">
           <!-- Populated dynamically via JS -->
         </div>
       </div>
 
       <!-- Modal Action -->
-      <div class="pt-4 flex items-center justify-end gap-4 border-t border-neutral-800">
+      <div class="pt-4 flex items-center justify-end gap-4 border-t border-slate-200">
         <a id="modal-project-live" href="#" target="_blank" rel="noopener" class="btn-primary text-xs w-full sm:w-auto">
           <span>VISIT LIVE PROJECT</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
@@ -1250,7 +1250,7 @@
 
 
   <!-- TOAST NOTIFICATION CONTAINER -->
-  <div id="toast" class="bg-neutral-900 border border-neutral-700 text-white px-4 py-3 rounded-xl shadow-2xl font-mono text-xs flex items-center gap-3">
+  <div id="toast" class="bg-slate-900 border border-slate-800 text-white px-4 py-3 rounded-xl shadow-2xl font-mono text-xs flex items-center gap-3">
     <span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
     <span id="toast-message">Notification message</span>
   </div>
