@@ -14,6 +14,7 @@ function initMobileMenu() {
   const menuToggle = document.getElementById('mobile-menu-toggle');
   const mobileDrawer = document.getElementById('mobile-menu-drawer');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+  const menuIcon = document.getElementById('menu-icon');
 
   if (!menuToggle || !mobileDrawer) return;
 
@@ -24,16 +25,39 @@ function initMobileMenu() {
     if (isExpanded) {
       mobileDrawer.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
+      if (menuIcon) {
+        menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>`;
+      }
     } else {
       mobileDrawer.classList.add('hidden');
       document.body.style.overflow = '';
+      if (menuIcon) {
+        menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>`;
+      }
     }
   }
 
-  menuToggle.addEventListener('click', () => toggleMenu());
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
 
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => toggleMenu(false));
+  });
+
+  // Close drawer if clicking outside content
+  mobileDrawer.addEventListener('click', (e) => {
+    if (e.target === mobileDrawer) {
+      toggleMenu(false);
+    }
+  });
+
+  // Close drawer on ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+      toggleMenu(false);
+    }
   });
 }
 
@@ -42,7 +66,6 @@ function initMobileMenu() {
  */
 function initCopyEmailBtn() {
   const copyBtns = document.querySelectorAll('.copy-email-btn');
-  const toast = document.getElementById('toast');
   const emailText = "ravulamanohar8@gmail.com";
 
   copyBtns.forEach(btn => {
