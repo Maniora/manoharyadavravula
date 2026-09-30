@@ -63,15 +63,20 @@
   <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent bg-white/80 backdrop-blur-md" id="main-nav">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
       
-      <!-- Brand Logo / Monogram -->
+      <!-- Brand Logo / Avatar + Name -->
       <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group">
-        <span class="w-2.5 h-2.5 rounded-full bg-red-600 inline-block shadow-[0_0_10px_rgba(220,38,38,0.5)]"></span>
-        <span class="font-mono font-bold tracking-tight text-base sm:text-lg text-slate-900 group-hover:text-red-600 transition-colors">
-          RMY<span class="text-red-600">.</span>
-        </span>
-        <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono uppercase bg-slate-100 border border-slate-200 text-slate-600 rounded">
-          DEVELOPER & FOUNDER
-        </span>
+        <div class="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden border border-red-500/80 shadow-sm shrink-0 bg-slate-100 group-hover:border-red-600 transition-colors">
+          <img src="assets/images/mani.jpg" alt="Ravula Manohar Yadav" class="w-full h-full object-cover object-top">
+          <span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-emerald-500 border border-white"></span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-mono font-bold tracking-tight text-sm sm:text-base text-slate-900 group-hover:text-red-600 transition-colors leading-tight">
+            MANOHAR<span class="text-red-600">.</span>
+          </span>
+          <span class="text-[9px] font-mono uppercase text-slate-500 leading-none hidden sm:block">
+            FULL STACK DEV
+          </span>
+        </div>
       </a>
 
       <!-- Desktop Nav Links -->
@@ -92,8 +97,8 @@
       </div>
 
       <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none rounded-lg border border-slate-200 bg-white shadow-sm">
-        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <button id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" class="md:hidden p-2 text-slate-700 hover:text-red-600 hover:bg-slate-100 focus:outline-none rounded-lg border border-slate-200 bg-white/90 shadow-sm transition-colors flex items-center justify-center">
+        <svg id="menu-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
@@ -364,18 +369,23 @@
           <div class="surface-card rounded-xl p-5 sm:p-8 space-y-6 relative overflow-hidden bg-white border border-slate-200">
             
             <!-- Profile Card Visual Header -->
-            <div class="flex items-center gap-4 border-b border-slate-200 pb-5">
+            <div class="flex items-center gap-4 sm:gap-5 border-b border-slate-200 pb-5">
               
-              <!-- Avatar Illustration Graphic -->
-              <div class="relative w-16 h-16 rounded-full bg-gradient-to-tr from-red-600 via-slate-800 to-slate-900 border-2 border-red-500 flex items-center justify-center shrink-0 shadow-md">
-                <span class="font-mono font-bold text-xl text-white">RMY</span>
-                <span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white" title="Available for work"></span>
+              <!-- Real Profile Photo with Live Availability Ring -->
+              <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-red-500/80 shadow-md shrink-0 bg-slate-100 group">
+                <img 
+                  src="assets/images/mani.jpg" 
+                  alt="Ravula Manohar Yadav - Full Stack Developer" 
+                  class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                >
+                <span class="absolute bottom-1.5 right-1.5 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white shadow-sm ring-2 ring-emerald-500/30" title="Available for work"></span>
               </div>
 
               <div>
-                <h3 class="font-bold text-lg text-slate-900">Ravula Manohar Yadav</h3>
-                <p class="text-xs font-mono text-red-600 font-semibold">Full Stack Developer • Founder @ Maniora</p>
-                <p class="text-[11px] font-mono text-slate-500">Hyderabad, Telangana, India</p>
+                <h3 class="font-bold text-lg sm:text-xl text-slate-900 leading-tight">Ravula Manohar Yadav</h3>
+                <p class="text-xs font-mono text-red-600 font-semibold mt-1">Full Stack Developer • Founder @ Maniora</p>
+                <p class="text-[11px] font-mono text-slate-500 mt-0.5">Hyderabad, Telangana, India</p>
               </div>
 
             </div>

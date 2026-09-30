@@ -72,12 +72,12 @@ function initNavbarScrollState() {
   if (!navbar) return;
 
   const handleScroll = () => {
-    if (window.scrollY > 30) {
-      navbar.classList.add('backdrop-blur-md', 'bg-neutral-950/85', 'border-neutral-800/80', 'shadow-lg');
-      navbar.classList.remove('border-transparent');
+    if (window.scrollY > 20) {
+      navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'border-slate-200/80', 'shadow-sm');
+      navbar.classList.remove('bg-white/80', 'border-transparent');
     } else {
-      navbar.classList.remove('backdrop-blur-md', 'bg-neutral-950/85', 'border-neutral-800/80', 'shadow-lg');
-      navbar.classList.add('border-transparent');
+      navbar.classList.remove('bg-white/95', 'border-slate-200/80', 'shadow-sm');
+      navbar.classList.add('bg-white/80', 'backdrop-blur-md', 'border-transparent');
     }
   };
 
